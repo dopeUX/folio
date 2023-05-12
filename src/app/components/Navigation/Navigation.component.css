@@ -31,11 +31,10 @@ body {
   z-index: 999;
   width: 99%;
   height: 100vh;
-  -webkit-backdrop-filter: blur(8px);
-          backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   opacity: 0;
   transition: all 0.5s ease-in-out;
-  background: linear-gradient(90deg, rgba(2, 0, 36, 0) 0%, rgba(195, 61, 158, 0.693714986) 33%, rgba(195, 61, 158, 0.8757878151) 54%, rgb(187, 0, 135) 100%);
 }
 .navigation-screen .nav-screen-wrapper {
   width: 40%;

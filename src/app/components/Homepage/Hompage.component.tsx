@@ -2,8 +2,14 @@
 import React from "react";
 import './Homepage.component.css';
 import Hamburger from "../../common/Hamburger/Hamburger";
+import OutlinedButton from "../../common/OutlinedButton/OutlinedButton";
+import { useSelector } from "react-redux";
+import { RootState } from "../../store/store";
 
 const Homepage:React.FC<any> = () => {
+  const accentColor = useSelector((state:RootState)=>{
+	return state.appReducer.accentColor;
+  });	
   return (
 	<section className="homepage">
 	  <h1>Bonjour!</h1>
@@ -11,15 +17,16 @@ const Homepage:React.FC<any> = () => {
 	  
 	  <div className="homepage-social-logos">
 	   <a href="">
-	    <img src="/public/assets/github-logo.svg" alt="" />
+	    <img className="color-pink" src="/public/assets/github-logo.svg" alt="" />
 	   </a>	
 	   <a href="">
-	    <img src="/public/assets/linkedin-logo.svg" alt="" />
+	    <img className="color-pink" src="/public/assets/linkedin-logo.svg" alt="" />
 	   </a>
 	  </div>
       
 	  <a href="">
-	    <button className="outlined-btn homepage-download-btn">Resume <img className="download-btn-icon" src="/public/assets/download.svg" alt="" /></button>
+		<OutlinedButton title='Resume' classN='homepage-download-btn' color={accentColor}><img className="download-btn-icon color-pink" src="/public/assets/download.svg" alt="" /></OutlinedButton>
+	    {/* <button className="outlined-btn homepage-download-btn">Resume <img className="download-btn-icon" src="/public/assets/download.svg" alt="" /></button> */}
 	  </a>
 	</section>
   )	

@@ -24,4 +24,8 @@ body {
 .light-theme {
   background-color: white;
   color: black;
+}
+
+.color-pink {
+  filter: invert(29%) sepia(100%) saturate(2779%) hue-rotate(295deg) brightness(68%) contrast(133%);
 }/*# sourceMappingURL=globalStyles.css.map */
