@@ -3,18 +3,18 @@ import { createSlice } from "@reduxjs/toolkit";
 
 
 const initialState = {
-	counter:2
+	showNavScreen:false
 }
 
 const AppSlice = createSlice({
 	name:'AppSlice',
 	initialState,
 	reducers:{
-	  updateCounter:(state)=>{
-		state.counter++
+	  updateNavScreenState:(state)=>{
+		state.showNavScreen = !state.showNavScreen;
 	  }	,
 	}
 })
 
-export const {updateCounter} = AppSlice.actions;
+export const {updateNavScreenState} = AppSlice.actions;
 export default AppSlice.reducer;

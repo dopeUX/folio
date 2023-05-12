@@ -11,7 +11,7 @@ import AppScreen from './components/AppScreen/AppScreen.component';
 
 function App() {
   const counter = useSelector((state:RootState)=>{
-    return state.appReducer.counter
+    return state.appReducer.showNavScreen
   })
   const dispatch = useDispatch();
   return (

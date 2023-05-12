@@ -1,0 +1,16 @@
+.navbar-items {
+  display: block;
+  height: -moz-fit-content;
+  height: fit-content;
+  list-style-type: none;
+}
+.navbar-items li {
+  font-family: NeueMontreal-Medium, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color: white;
+  font-size: 6rem;
+  margin-bottom: 1rem;
+}
+.navbar-items li a {
+  text-decoration: none;
+  color: white;
+}/*# sourceMappingURL=Navbar.css.map */
