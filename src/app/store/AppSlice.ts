@@ -3,7 +3,8 @@ import { createSlice } from "@reduxjs/toolkit";
 
 
 const initialState = {
-	showNavScreen:false
+	showNavScreen:false,
+	screenZoomState:''
 }
 
 const AppSlice = createSlice({
@@ -12,9 +13,12 @@ const AppSlice = createSlice({
 	reducers:{
 	  updateNavScreenState:(state)=>{
 		state.showNavScreen = !state.showNavScreen;
-	  }	,
+	  },
+	  updateScreenZoomState:(state, action)=>{
+		state.screenZoomState = action.payload;
+	  }
 	}
 })
 
-export const {updateNavScreenState} = AppSlice.actions;
+export const {updateNavScreenState, updateScreenZoomState} = AppSlice.actions;
 export default AppSlice.reducer;

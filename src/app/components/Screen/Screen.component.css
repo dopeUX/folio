@@ -3,6 +3,7 @@
   margin: auto;
   padding: 1rem 2rem;
   position: relative;
+  transition: transform 0.5s;
 }
 .screen .screen-nav-button {
   width: -moz-fit-content;
