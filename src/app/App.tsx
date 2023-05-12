@@ -5,7 +5,7 @@ import '../font.css'
 import './App.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState } from './store/store';
-import { updateCounter } from './store/AppSlice';
+import Screen from './components/Screen/Screen.component';
 // import './font.css';
 
 function App() {
@@ -14,12 +14,9 @@ function App() {
   })
   const dispatch = useDispatch();
   return (
-    <div>
-      <h1>{counter}</h1>
-      <button onClick={()=>{
-         dispatch(updateCounter())
-      }}>Press me!</button>
-    </div>
+    <>
+     <Screen/>
+    </>
   )
 }
 
