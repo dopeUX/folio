@@ -1,6 +1,5 @@
 .screen {
   width: 80%;
-  display: flex;
-  justify-content: center;
   margin: auto;
+  padding: 1rem 2rem;
 }/*# sourceMappingURL=Screen.component.css.map */

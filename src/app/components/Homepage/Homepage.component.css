@@ -1,0 +1,24 @@
+.homepage {
+  display: block;
+  margin-top: 2.5rem;
+}
+.homepage h1 {
+  margin: 0;
+  padding: 0;
+  margin-left: -0.5rem;
+  font-size: 10rem;
+}
+.homepage p {
+  width: 900px;
+  color: #565656;
+}
+.homepage .homepage-social-logos {
+  display: flex;
+  margin-top: 4rem;
+}
+.homepage .homepage-social-logos img {
+  margin-right: 3rem;
+}
+.homepage .test {
+  font-size: 2rem;
+}/*# sourceMappingURL=Homepage.component.css.map */

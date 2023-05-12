@@ -1,0 +1,26 @@
+.homepage{
+	display: block;
+    margin-top: 2.5rem;
+	h1{
+		margin: 0;
+		padding: 0;
+		margin-left: -.5rem;
+		font-size: 10rem;
+	}
+	p{
+	   width: 900px;	
+	   color: #565656;
+	}
+
+	.homepage-social-logos{
+		display: flex;
+        margin-top: 4rem;
+		img{
+			margin-right: 3rem;
+		}
+	}
+
+	.test{
+		font-size: 2rem;
+	}
+}
