@@ -5,6 +5,11 @@
   text-align: center;
 }
 
+body{
+  /* font-family:Inter; */
+  font-family:NeueMontreal-Light, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
