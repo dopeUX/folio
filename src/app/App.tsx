@@ -3,10 +3,11 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import '../font.css'
 import './App.css';
+import './styles/globalStyles.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState } from './store/store';
 import Screen from './components/Screen/Screen.component';
-// import './font.css';
+import AppScreen from './components/AppScreen/AppScreen.component';
 
 function App() {
   const counter = useSelector((state:RootState)=>{
@@ -15,7 +16,7 @@ function App() {
   const dispatch = useDispatch();
   return (
     <>
-     <Screen/>
+     <AppScreen/>
     </>
   )
 }

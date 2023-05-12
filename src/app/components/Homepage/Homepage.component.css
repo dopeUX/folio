@@ -1,6 +1,7 @@
 .homepage {
   display: block;
   margin-top: 2.5rem;
+  position: relative;
 }
 .homepage h1 {
   margin: 0;
@@ -14,11 +15,21 @@
 }
 .homepage .homepage-social-logos {
   display: flex;
-  margin-top: 4rem;
+  margin-top: 6rem;
 }
 .homepage .homepage-social-logos img {
+  width: 50px;
+  height: 50px;
   margin-right: 3rem;
 }
-.homepage .test {
-  font-size: 2rem;
+.homepage .homepage-download-btn {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: auto 0 0rem auto;
+}
+.homepage .homepage-download-btn .download-btn-icon {
+  width: 20px;
+  height: 20px;
+  margin: auto auto auto 1rem;
 }/*# sourceMappingURL=Homepage.component.css.map */

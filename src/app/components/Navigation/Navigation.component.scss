@@ -1,0 +1,11 @@
+@import '../../styles/globalStyles.scss';
+
+.navigation{
+	position: absolute;
+	z-index: 999;
+	width: 99%;
+	height: 100vh;
+    backdrop-filter: blur(8px);
+	// background: $primary-col;
+	background: linear-gradient(90deg, rgba(2,0,36,0) 0%, rgba(195,61,158,0.6937149859943977) 33%, rgba(195,61,158,0.8757878151260504) 54%, rgba(187,0,135,1) 100%);
+}

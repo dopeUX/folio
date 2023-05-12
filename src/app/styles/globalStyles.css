@@ -1,0 +1,27 @@
+.outlined-btn {
+  font-family: NeueMontreal-Regular, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background-color: white;
+  color: #EF13B2;
+  border: 2px solid #EF13B2;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+body {
+  background-color: white;
+  color: black;
+}
+
+.dark-theme {
+  background-color: black;
+  color: white;
+}
+
+.light-theme {
+  background-color: white;
+  color: black;
+}/*# sourceMappingURL=globalStyles.css.map */

@@ -1,0 +1,37 @@
+.outlined-btn {
+  font-family: NeueMontreal-Regular, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background-color: white;
+  color: #EF13B2;
+  border: 2px solid #EF13B2;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+body {
+  background-color: white;
+  color: black;
+}
+
+.dark-theme {
+  background-color: black;
+  color: white;
+}
+
+.light-theme {
+  background-color: white;
+  color: black;
+}
+
+.navigation {
+  position: absolute;
+  z-index: 999;
+  width: 99%;
+  height: 100vh;
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  background: linear-gradient(90deg, rgba(2, 0, 36, 0) 0%, rgba(195, 61, 158, 0.693714986) 33%, rgba(195, 61, 158, 0.8757878151) 54%, rgb(187, 0, 135) 100%);
+}/*# sourceMappingURL=Navigation.component.css.map */

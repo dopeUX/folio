@@ -1,0 +1,28 @@
+$primary-col:#EF13B2;
+
+.outlined-btn{
+   font-family:NeueMontreal-Regular, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+   background-color: white;
+   color: $primary-col;
+   border: 2px solid $primary-col;
+   font-size: 1rem;
+   border-radius: .5rem;
+   padding: 1rem 2rem;
+   justify-content: center;
+   align-items: center;
+   display: flex;
+}
+
+body{
+	background-color: white;
+	color: black;
+}
+.dark-theme{
+	background-color: black;
+	color: white;
+}
+
+.light-theme{
+	background-color: white;
+	color: black;
+}
