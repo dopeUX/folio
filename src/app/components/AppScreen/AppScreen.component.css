@@ -1,4 +1,5 @@
 .AppScreen {
+  position: relative;
   width: 100%;
   height: -moz-fit-content;
   height: fit-content;

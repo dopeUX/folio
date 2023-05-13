@@ -26,11 +26,27 @@ body {
   color: black;
 }
 
+.color-pink {
+  filter: invert(29%) sepia(94%) saturate(6188%) hue-rotate(303deg) brightness(84%) contrast(122%);
+}
+
+.color-green {
+  filter: brightness(0) saturate(100%) invert(47%) sepia(95%) saturate(360%) hue-rotate(84deg) brightness(95%) contrast(84%);
+}
+
+.color-violet {
+  filter: brightness(0) saturate(100%) invert(12%) sepia(31%) saturate(5498%) hue-rotate(228deg) brightness(102%) contrast(99%);
+}
+
+.color-blue {
+  filter: brightness(0) saturate(100%) invert(13%) sepia(100%) saturate(3715%) hue-rotate(237deg) brightness(102%) contrast(142%);
+}
+
 .navigation-screen {
   position: absolute;
   z-index: 999;
   width: 99%;
-  height: 100vh;
+  height: 100%;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   opacity: 0;

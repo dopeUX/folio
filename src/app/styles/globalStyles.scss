@@ -28,5 +28,17 @@ body{
 }
 
 .color-pink{
-	filter:invert(29%) sepia(100%) saturate(2779%) hue-rotate(295deg) brightness(68%) contrast(133%);
+	filter: brightness(0) saturate(100%) invert(24%) sepia(82%) saturate(6944%) hue-rotate(305deg) brightness(88%) contrast(114%);
+}
+
+.color-green{
+   filter: brightness(0) saturate(100%) invert(47%) sepia(95%) saturate(360%) hue-rotate(84deg) brightness(95%) contrast(84%);
+}
+
+.color-violet{
+   filter: brightness(0) saturate(100%) invert(12%) sepia(31%) saturate(5498%) hue-rotate(228deg) brightness(102%) contrast(99%);
+}
+
+.color-blue{
+   filter: brightness(0) saturate(100%) invert(13%) sepia(100%) saturate(3715%) hue-rotate(237deg) brightness(102%) contrast(142%);
 }
