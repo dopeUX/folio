@@ -7,7 +7,10 @@ const initialState = {
 	screenZoomState:'',
 	isAccentColor:false,
 	accentColor:'#32a852',
-	colorPalleteIndex:0
+	colorPalleteIndex:0,
+	isLoading:false,
+	loadingScreenAnim:'',
+	isLoadingScreenTurnedOn:false
 }
 
 const AppSlice = createSlice({
@@ -30,9 +33,15 @@ const AppSlice = createSlice({
 		}else{
 			state.colorPalleteIndex = 0;
 		}
+	  },
+	  updateIsLoading:(state,action)=>{
+		state.isLoading = action.payload;
+	  },
+	  updateIsLoadingScreenTurnedOn:(state, action)=>{
+		state.isLoadingScreenTurnedOn = action.payload
 	  }
 	}
 })
 
-export const {updateNavScreenState, updateScreenZoomState, updateColorPalleteIndex} = AppSlice.actions;
+export const {updateNavScreenState, updateScreenZoomState, updateColorPalleteIndex, updateIsLoading, updateIsLoadingScreenTurnedOn} = AppSlice.actions;
 export default AppSlice.reducer;
