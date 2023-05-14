@@ -5,9 +5,15 @@ const LoadingScreen: React.FC<any> = () => {
   return (
     <div className="loading-screen">
       <div className="loading-screen-wrapper">
-        <p>"bitches lie, compilers don't!"</p>
+        <p>"bichess lie, compilers don't!"</p>
       </div>
-      <img src="/public/assets/bgimage.png" alt="" />
+      <div className="loading-screen-image-wrapper">
+        <img
+          className="loading-screen-bg-image"
+          src="/public/assets/bgimage.jpg"
+          alt=""
+        />
+      </div>
     </div>
   );
 };

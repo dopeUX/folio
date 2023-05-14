@@ -22,7 +22,7 @@ const Homepage: React.FC<any> = () => {
   }, [colorPalleteIndex]);
   return (
     <section className="homepage">
-      <h1>Bonjour!</h1>
+      <h1 className="homepage-head">Bonjour!</h1>
       <p>
         Lorem ipsum is typically a corrupted version of De finibus bonorum et
         malorum, a 1st-century BC text by the Roman statesman and philosopher

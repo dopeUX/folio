@@ -1,13 +1,30 @@
 .homepage {
   display: block;
-  margin-top: 2.5rem;
+  margin-top: 2.1rem;
   position: relative;
 }
 .homepage h1 {
   margin: 0;
   padding: 0;
   margin-left: -0.5rem;
-  font-size: 10rem;
+  font-size: 8rem;
+}
+.homepage .homepage-head {
+  background: linear-gradient(to right, #7953cd 20%, #00affa 30%, #0190cd 70%, #764ada 80%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  background-size: 500% auto;
+  animation: textShine 5s ease-in-out infinite alternate;
+}
+@keyframes textShine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
 }
 .homepage p {
   width: 900px;
@@ -16,7 +33,7 @@
 }
 .homepage .homepage-social-logos {
   display: flex;
-  margin-top: 6rem;
+  margin-top: 4rem;
 }
 .homepage .homepage-social-logos img {
   width: 50px;
