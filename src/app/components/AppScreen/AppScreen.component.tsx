@@ -23,19 +23,22 @@ const AppScreen: React.FC<any> = () => {
 
   return (
     <div className="AppScreen">
-      {/* <BlurOverlayLoadingScreen /> */}
-      {isLoading && <LoadingScreen />}
+      {isLoading && <BlurOverlayLoadingScreen />}
+      {/* {isLoading && <LoadingScreen />} */}
 
-      <button
+      {/* /////TEST CODE ------- */}
+      {/* <button
         onClick={() => {
           dispatch(updateIsLoading(true));
           dispatch(updateIsLoadingScreenTurnedOn(true));
         }}
       >
         click
-      </button>
-      {/* {isNavScreenOn && <Navigation isNavScreenOn={isNavScreenOn} />}
-      <Screen /> */}
+      </button> */}
+      {/* /////////////? */}
+
+      {isNavScreenOn && <Navigation isNavScreenOn={isNavScreenOn} />}
+      <Screen />
     </div>
   );
 };

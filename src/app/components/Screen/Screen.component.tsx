@@ -27,9 +27,8 @@ const Screen: React.FC<any> = () => {
   return (
     <div ref={screenRef} className="screen light-theme">
       <Header logoTitle="Dé" />
-      ///All Routes --------------
+      {/* ///All Routes -------------- */}
       <Homepage />
-      ////////////
       <a
         href=""
         onClick={(e) => {

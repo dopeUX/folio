@@ -4,10 +4,29 @@
     position: absolute;
     backdrop-filter: blur(10px);
     background-color: rgba(44, 44, 44, 0.334);
-    z-index: 999;
+    z-index: 99999;
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+    transition: all .5s ease;
+
+    @keyframes blurAnim {
+        from{
+            opacity:0;
+        }
+        to{
+            opacity: 1;
+        }
+    }
+    @keyframes blurAnimRemove {
+        from{
+            opacity:1;
+        }
+        to{
+            opacity: 0;
+        }
+    }
 
     p{
         font-weight: 700;
