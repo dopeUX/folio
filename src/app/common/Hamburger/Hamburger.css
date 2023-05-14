@@ -1,7 +1,11 @@
 .hamburger .hamburger-dot {
   width: 2em;
   height: 2em;
-  margin-bottom: 1rem;
   background-color: black;
   border-radius: 50%;
+  transition: all 0.5s ease-in-out;
+}
+.hamburger .middle-dot {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }/*# sourceMappingURL=Hamburger.css.map */

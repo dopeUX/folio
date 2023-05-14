@@ -5,6 +5,7 @@ import Screen from "../Screen/Screen.component";
 import Navigation from "../Navigation/Navigation.component";
 import { useSelector } from "react-redux";
 import { RootState } from "../../store/store";
+import LoadingScreen from "../LoadingScreen/LoadingScreen.component";
 
 const AppScreen:React.FC<any> = () =>{
 	const isNavScreenOn = useSelector((state:RootState)=>{
@@ -12,6 +13,7 @@ const AppScreen:React.FC<any> = () =>{
 	});
 	return (
 		<div className="AppScreen">
+			<LoadingScreen/>
 			{
 				isNavScreenOn && <Navigation isNavScreenOn = {isNavScreenOn}/>
 			}

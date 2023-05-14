@@ -1,11 +1,16 @@
 .hamburger{
 	// display: flex;
-
+     
 	.hamburger-dot{
 	  	width: 2em;
 		height: 2em;
-		margin-bottom: 1rem;
+		// margin-bottom: 1rem;
 		background-color: black;
 		border-radius: 50%;
+		transition: all .5s ease-in-out;
+	}
+	.middle-dot{
+		margin-top: 1rem;
+		margin-bottom: 1rem;
 	}
 }

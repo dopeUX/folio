@@ -12,7 +12,7 @@
 }
 
 body {
-  background-color: white;
+  background-color: #f2f2f2;
   color: black;
 }
 
@@ -22,12 +22,12 @@ body {
 }
 
 .light-theme {
-  background-color: white;
+  background-color: #f2f2f2;
   color: black;
 }
 
 .color-pink {
-  filter: invert(29%) sepia(94%) saturate(6188%) hue-rotate(303deg) brightness(84%) contrast(122%);
+  filter: brightness(0) saturate(100%) invert(24%) sepia(82%) saturate(6944%) hue-rotate(305deg) brightness(88%) contrast(114%);
 }
 
 .color-green {
@@ -45,7 +45,7 @@ body {
 .navigation-screen {
   position: absolute;
   z-index: 999;
-  width: 99%;
+  width: 100%;
   height: 100%;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
