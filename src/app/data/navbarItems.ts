@@ -1,7 +1,20 @@
+/* eslint-disable no-mixed-spaces-and-tabs */
 const navItems = [
-	'work.',
-	'me?',
-	'reach.'
+	{
+	  name:'work',
+	  title:'work.',
+	  navImage:'/work-nav'	
+	},
+	{
+	  name:'me',
+	  title:'me?',
+	  navImage:'/me-nav'	
+	},
+	{
+	  name:'reach',
+	  title:'reach.',
+	  navImage:'/reach-nav'	
+	}
 ]
 
 export default navItems;

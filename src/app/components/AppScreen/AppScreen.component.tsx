@@ -37,7 +37,7 @@ const AppScreen: React.FC<any> = () => {
       </button> */}
       {/* /////////////? */}
 
-      {isNavScreenOn && <Navigation isNavScreenOn={isNavScreenOn} />}
+      <Navigation isNavScreenOn={isNavScreenOn} />
       <Screen />
     </div>
   );

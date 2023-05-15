@@ -15,9 +15,12 @@ import colorPallete from "../../data/colorPallete";
 
 const Navigation: React.FC<any> = ({ isNavScreenOn }) => {
   const navScreenRef: any = useRef();
+  const [currentNavIndex, setCurrentNavIndex] = useState(0);
   const isAccentColor = useSelector((state: RootState) => {
     return state.appReducer.isAccentColor;
   });
+  const [showImage, setShowImage] = useState(false);
+  const navImageRef:any = useRef();
   // const accentColor = useSelector((state:RootState)=>{
   // 	return state.appReducer.accentColor;
   // })
@@ -30,18 +33,33 @@ const Navigation: React.FC<any> = ({ isNavScreenOn }) => {
 
   const navItemsRef: any = useRef();
   const [clickedOutside, setClickedOutside] = useState(false);
-  const handleClickOutside = (e: any) => {
-    if (!navItemsRef.current.contains(e.target)) {
-      navScreenRef.current.style.opacity = 0;
-      dispatch(updateScreenZoomState("scale(1)"));
-      setTimeout(() => {
-        dispatch(updateNavScreenState());
-      }, 600);
-      setClickedOutside(true);
-    }
-  };
+  // const handleClickOutside = (e: any) => {
+  //   if (!navItemsRef.current.contains(e.target)) {
+  //     navScreenRef.current.style.opacity = 0;
+  //     dispatch(updateScreenZoomState("scale(1)"));
+  //     setTimeout(() => {
+  //       dispatch(updateNavScreenState());
+  //     }, 600);
+  //     setClickedOutside(true);
+  //   }
+  // };
+
 
   const handleClickInside = () => setClickedOutside(false);
+
+  const setImageVisible = (ifShowImage:boolean) =>{
+    if(ifShowImage){
+    setShowImage(true);
+    setTimeout(()=>{
+      navImageRef.current.style.opacity = 1;
+    },10)
+    }else{
+      navImageRef.current.style.opacity = 0;
+      setTimeout(()=>{
+        setShowImage(false);
+      },1200)
+    }
+  }
   useEffect(() => {
     if (isNavScreenOn) {
       setTimeout(() => {
@@ -55,32 +73,44 @@ const Navigation: React.FC<any> = ({ isNavScreenOn }) => {
     } else {
       navScreenRef.current.style.background = `linear-gradient(90deg, ${color}1B 0%, ${color}B0 30%, ${color}EA 55%, ${color}FF 100%)`;
     }
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
+    // document.addEventListener("mousedown", handleClickOutside);
+    // return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   return (
     <div ref={navScreenRef} className="navigation-screen">
+      <div className="nav-image-wrapper">
+       {showImage && <img ref={navImageRef} src={`/public/assets/${navItems[currentNavIndex].navImage}.png`} alt="" />}
+       </div>
       <div
         className="nav-screen-wrapper"
         onMouseEnter={() => {
           //   console.log('entered')
         }}
         onMouseLeave={() => {
-          navScreenRef.current.style.opacity = 0;
-          dispatch(updateScreenZoomState("scale(1)"));
-          setTimeout(() => {
-            dispatch(updateNavScreenState());
-          }, 600);
+          // navScreenRef.current.style.opacity = 0;
+          // dispatch(updateScreenZoomState("scale(1)"));
+          // setTimeout(() => {
+          //   dispatch(updateNavScreenState());
+          // }, 600);
           //   console.log('left')
         }}
       >
         <div
           className="nav-items"
           ref={navItemsRef}
-          onClick={handleClickInside}
+          onMouseEnter={()=>{
+            setImageVisible(true);
+          }}
+          onMouseLeave={()=>{
+            setImageVisible(false);
+          }}
+          // onClick={handleClickInside}
         >
-          <Navbar navItems={navItems} />
+          <Navbar navItems={navItems} onItemHover={(e:number)=>{
+            console.log(showImage,"Navbar")
+            setCurrentNavIndex(e)
+          }}/>
         </div>
       </div>
     </div>

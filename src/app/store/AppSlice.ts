@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import colorPallete from "../data/colorPallete";
 
 const initialState = {
-	showNavScreen:false,
+	showNavScreen:true,
 	screenZoomState:'',
 	isAccentColor:false,
 	accentColor:'#32a852',

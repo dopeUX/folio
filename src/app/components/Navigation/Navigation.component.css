@@ -52,6 +52,24 @@ body {
   opacity: 0;
   transition: all 0.5s ease-in-out;
 }
+.navigation-screen .nav-image-wrapper {
+  position: absolute;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 100%;
+  left: 7rem;
+  display: flex;
+  align-items: center;
+}
+.navigation-screen .nav-image-wrapper img {
+  width: 30rem;
+  top: 0;
+  bottom: 0;
+  height: auto;
+  margin: auto;
+  opacity: 0;
+  transition: all 1s ease;
+}
 .navigation-screen .nav-screen-wrapper {
   width: 40%;
   position: absolute;

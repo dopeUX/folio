@@ -5,9 +5,10 @@ import { useSelector } from "react-redux";
 import { RootState } from "../../store/store";
 import colorPallete from "../../data/colorPallete";
 interface NavbarProps {
-  navItems: Array<string>;
+  navItems: Array<any>;
+  onItemHover: any;
 }
-const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
+const Navbar: React.FC<NavbarProps> = ({ navItems, onItemHover }) => {
   const isAccentColor = useSelector((state: RootState) => {
     return state.appReducer.isAccentColor;
   });
@@ -30,9 +31,11 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
     <ul ref={itemRef} className="navbar-items">
       {navItems.map((item: any, index: number) => {
         return (
-          <li>
+          <li key={index} onMouseEnter={(e)=>{
+              onItemHover(index);
+           }}>
             <a className="nav-item-a" href="">
-              {item}
+              {item.title}
             </a>
           </li>
         );
