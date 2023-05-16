@@ -54,14 +54,14 @@ const LoadingScreen: React.FC<any> = () => {
         <p ref={quoteRef}>"bichess lie, compilers don't!"</p>
       </div>
       <div className="loading-screen-image-wrapper">
-        <button
+        {/* <button
           className="test"
           onClick={() => {
             dispatch(updateIsLoadingScreenTurnedOn(false));
           }}
         >
           Test
-        </button>
+        </button> */}
         <img
           ref={bgImageRef}
           className="loading-screen-bg-image"

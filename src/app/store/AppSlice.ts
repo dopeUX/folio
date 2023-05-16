@@ -3,20 +3,24 @@ import { createSlice } from "@reduxjs/toolkit";
 import colorPallete from "../data/colorPallete";
 
 const initialState = {
-	showNavScreen:true,
+	showNavScreen:false,
 	screenZoomState:'',
 	isAccentColor:false,
 	accentColor:'#32a852',
 	colorPalleteIndex:0,
 	isLoading:false,
 	loadingScreenAnim:'',
-	isLoadingScreenTurnedOn:false
+	isLoadingScreenTurnedOn:false,
+	isAppInitiallyRendered:true
 }
 
 const AppSlice = createSlice({
 	name:'AppSlice',
 	initialState,
 	reducers:{
+	  updateIsAppInitiallyRendered:(state)=>{
+        state.isAppInitiallyRendered = false;
+	  },
 	  updateNavScreenState:(state)=>{
 		state.showNavScreen = !state.showNavScreen;
 	  },

@@ -12,6 +12,7 @@ import {
 } from "../../store/AppSlice";
 import { RootState } from "../../store/store";
 import colorPallete from "../../data/colorPallete";
+import { Navigate } from "react-router-dom"; 
 
 const Navigation: React.FC<any> = ({ isNavScreenOn }) => {
   const navScreenRef: any = useRef();
@@ -32,18 +33,18 @@ const Navigation: React.FC<any> = ({ isNavScreenOn }) => {
   const color = accentColor;
 
   const navItemsRef: any = useRef();
+  
   const [clickedOutside, setClickedOutside] = useState(false);
-  // const handleClickOutside = (e: any) => {
-  //   if (!navItemsRef.current.contains(e.target)) {
-  //     navScreenRef.current.style.opacity = 0;
-  //     dispatch(updateScreenZoomState("scale(1)"));
-  //     setTimeout(() => {
-  //       dispatch(updateNavScreenState());
-  //     }, 600);
-  //     setClickedOutside(true);
-  //   }
-  // };
-
+  const handleClickOutside = (e: any) => {
+    if (!navItemsRef.current.contains(e.target)) {
+      navScreenRef.current.style.opacity = 0;
+      dispatch(updateScreenZoomState("scale(1)"));
+      setTimeout(() => {
+        dispatch(updateNavScreenState());
+      }, 600);
+      setClickedOutside(true);
+    }
+  };
 
   const handleClickInside = () => setClickedOutside(false);
 
@@ -52,12 +53,14 @@ const Navigation: React.FC<any> = ({ isNavScreenOn }) => {
     setShowImage(true);
     setTimeout(()=>{
       navImageRef.current.style.opacity = 1;
-    },10)
+    },1);
     }else{
+      if(navImageRef){
       navImageRef.current.style.opacity = 0;
       setTimeout(()=>{
         setShowImage(false);
-      },1200)
+      },600)
+     }
     }
   }
   useEffect(() => {
@@ -73,14 +76,14 @@ const Navigation: React.FC<any> = ({ isNavScreenOn }) => {
     } else {
       navScreenRef.current.style.background = `linear-gradient(90deg, ${color}1B 0%, ${color}B0 30%, ${color}EA 55%, ${color}FF 100%)`;
     }
-    // document.addEventListener("mousedown", handleClickOutside);
-    // return () => document.removeEventListener("mousedown", handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   return (
     <div ref={navScreenRef} className="navigation-screen">
       <div className="nav-image-wrapper">
-       {showImage && <img ref={navImageRef} src={`/public/assets/${navItems[currentNavIndex].navImage}.png`} alt="" />}
+       {<img ref={navImageRef} src={`/public/assets/${navItems[currentNavIndex].navImage}.png`} alt="" />}
        </div>
       <div
         className="nav-screen-wrapper"
@@ -105,7 +108,7 @@ const Navigation: React.FC<any> = ({ isNavScreenOn }) => {
           onMouseLeave={()=>{
             setImageVisible(false);
           }}
-          // onClick={handleClickInside}
+          onClick={handleClickInside}
         >
           <Navbar navItems={navItems} onItemHover={(e:number)=>{
             console.log(showImage,"Navbar")

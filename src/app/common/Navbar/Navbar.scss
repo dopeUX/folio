@@ -4,6 +4,7 @@
 	display: block;
 	height: fit-content;
 	list-style-type: none;
+	text-align: right;
 
 	li{
 		font-family:NeueMontreal-Medium, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -13,6 +14,32 @@
 		a{
 			text-decoration: none;
 			color: inherit;
+		}
+	}
+	.test{
+		background-color: blue;
+	}
+	.gradient-anim{
+		background: linear-gradient(
+        to right,
+        #7953cd 20%,
+        #00affa 30%,
+        #0190cd 70%,
+        #764ada 80%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    background-size: 500% auto;
+    animation: textShine 3s ease-in-out infinite alternate;
+	}
+	@keyframes textShine {
+		0% {
+			background-position: 0% 50%;
+		}
+		100% {
+			background-position: 100% 50%;
 		}
 	}
 }

@@ -6,11 +6,13 @@ import Homepage from "../Homepage/Hompage.component";
 import Hamburger from "../../common/Hamburger/Hamburger";
 import { useDispatch, useSelector } from "react-redux";
 import {
+  updateIsLoadingScreenTurnedOn,
   updateNavScreenState,
   updateScreenZoomState,
 } from "../../store/AppSlice";
 import { RootState } from "../../store/store";
 import { Routes, Route } from "react-router-dom";
+import WorkPage from "../WorkPage/WorkPage.component";
 
 const Screen: React.FC<any> = () => {
   const isShowNavScreen = useSelector((state: RootState) => {
@@ -21,6 +23,15 @@ const Screen: React.FC<any> = () => {
   });
   const screenRef: any = useRef();
   const dispatch = useDispatch();
+  
+  useEffect(()=>{
+    setTimeout(() => {
+      dispatch(updateIsLoadingScreenTurnedOn(false));
+    },2000);
+    setTimeout(()=>{
+      dispatch(updateScreenZoomState('scale(1)'))
+    },2300)
+  },[]);
   useEffect(() => {
     screenRef.current.style.transform = screenZoomState;
   }, [screenZoomState]);
@@ -28,7 +39,11 @@ const Screen: React.FC<any> = () => {
     <div ref={screenRef} className="screen light-theme">
       <Header logoTitle="Dé" />
       {/* ///All Routes -------------- */}
-      <Homepage />
+      <Routes>
+        <Route path="/" Component={Homepage}/>
+        <Route path="/work" Component={WorkPage}/>
+      </Routes>
+      {/* <Homepage /> */}
       <a
         href=""
         onClick={(e) => {
