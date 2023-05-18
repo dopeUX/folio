@@ -1,0 +1,28 @@
+.work-page-item-card {
+  display: flex;
+  width: 100%;
+  margin-top: 3rem;
+  flex-direction: row;
+}
+.work-page-item-card .item-card-image-section {
+  width: 50%;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: block;
+  position: relative;
+}
+.work-page-item-card .item-card-image-section img {
+  position: absolute;
+  width: 60%;
+}
+.work-page-item-card .item-card-image-section .image2 {
+  top: 6rem;
+  left: 7rem;
+}
+.work-page-item-card .item-card-image-section .image3 {
+  top: 10rem;
+  left: -2rem;
+}
+.work-page-item-card .item-card-details-section h2 {
+  font-size: 2rem;
+}/*# sourceMappingURL=WorkPageItemCard.css.map */

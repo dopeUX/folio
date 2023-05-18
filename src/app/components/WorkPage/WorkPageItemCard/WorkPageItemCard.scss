@@ -1,0 +1,33 @@
+.work-page-item-card{
+     display: flex;
+     width: 100%;
+	 margin-top: 3rem;
+	 flex-direction: row;
+
+	 .item-card-image-section{
+	   width: 50%;
+	   height: fit-content;	
+	   display: block;
+	   position: relative;
+	  img{
+		position: absolute;
+        width: 60%;
+	  }	
+
+	  .image2{
+         top:6rem;
+		 left: 7rem;
+	  }
+	  .image3{
+		top:10rem;
+		left:-2rem;
+	  }
+
+	}
+
+	.item-card-details-section{
+		h2{
+			font-size: 2rem;
+		}
+	  }
+}
