@@ -49,11 +49,22 @@
 	}  
 	.action-btns{
 		display: flex;
-
+      
+		.action-btn-tab{
+		display: flex;
+		margin-right: 2rem;
 		h3{
 			color: black;
 			font: .5rem;
-			margin-right: 3rem;
+			margin-right: .5rem;
 		}
+		img{
+			width: 30px;
+            transition: transform .3s ease;
+			&:hover{
+				transform: rotate(-45deg);
+			}
+		}
+	  }
 	}
 }

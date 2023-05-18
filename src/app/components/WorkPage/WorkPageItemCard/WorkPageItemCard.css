@@ -45,8 +45,19 @@
 .work-page-item-card .action-btns {
   display: flex;
 }
-.work-page-item-card .action-btns h3 {
+.work-page-item-card .action-btns .action-btn-tab {
+  display: flex;
+  margin-right: 2rem;
+}
+.work-page-item-card .action-btns .action-btn-tab h3 {
   color: black;
   font: 0.5rem;
-  margin-right: 3rem;
+  margin-right: 0.5rem;
+}
+.work-page-item-card .action-btns .action-btn-tab img {
+  width: 30px;
+  transition: transform 0.3s ease;
+}
+.work-page-item-card .action-btns .action-btn-tab img:hover {
+  transform: rotate(-45deg);
 }/*# sourceMappingURL=WorkPageItemCard.css.map */
