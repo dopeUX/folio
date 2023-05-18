@@ -16,13 +16,17 @@ const Homepage: React.FC<any> = () => {
   });
   const accentColor = colorPallete[colorPalleteIndex].colorHex;
   const imageRef: any = useRef();
+  const audioRef:any = useRef(null);
   useLayoutEffect(() => {
     imageRef.current.style.filter = colorPallete[colorPalleteIndex].filter;
     // accentColor = colorPallete[colorPalleteIndex].colorHex;
   }, [colorPalleteIndex]);
+  useEffect(()=>{
+    // audioRef.current.play()
+  })
   return (
     <section className="homepage">
-      <h1 className="homepage-head">Bonjour!</h1>
+      <h1 className="head-anim">Bonjour!</h1>
       <p>
         Lorem ipsum is typically a corrupted version of De finibus bonorum et
         malorum, a 1st-century BC text by the Roman statesman and philosopher
@@ -56,7 +60,7 @@ const Homepage: React.FC<any> = () => {
           />
         </a>
       </div>
-
+      <audio id="backgroundMusic" ref={audioRef} autoPlay={true} src="/public/assets/samplemusic.mp3" controls muted={false}></audio>
       <a href="">
         <OutlinedButton
           title="Resume"

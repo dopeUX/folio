@@ -19,7 +19,7 @@ const WorkPage:React.FC<any> = () =>{
       if(isLoadingScreenTurnedOn){
 		setTimeout(()=>{
 		    dispatch(updateIsLoadingScreenTurnedOn(false));	
-		},1000)
+		},7000)
 	  }
 	},[])
 	return (

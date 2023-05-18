@@ -78,11 +78,19 @@
   background-color: rgba(28, 28, 28, 0.978);
 }
 .loading-screen .loading-screen-wrapper p {
-  opacity: 0;
-  transform: scale(1.1);
+  opacity: 1;
+  transform: translateY(0rem);
   color: white;
   font-size: 1.3rem;
   font-family: NeueMontreal-Medium, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+@keyframes textAnimSlideUpSlow {
+  from {
+    transform: translateY(0rem);
+  }
+  to {
+    transform: translateY(-5rem);
+  }
 }
 @keyframes textAnim {
   from {

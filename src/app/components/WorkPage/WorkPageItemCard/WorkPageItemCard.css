@@ -25,4 +25,28 @@
 }
 .work-page-item-card .item-card-details-section h2 {
   font-size: 2rem;
+}
+.work-page-item-card .item-card-details-section p {
+  color: rgb(127, 127, 127);
+}
+.work-page-item-card .stack-icons {
+  display: table;
+  margin-top: 2rem;
+  margin-left: -1rem;
+}
+.work-page-item-card .stack-icons img {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  margin: 0;
+  margin-top: 1rem;
+  margin-right: 30px;
+}
+.work-page-item-card .action-btns {
+  display: flex;
+}
+.work-page-item-card .action-btns h3 {
+  color: black;
+  font: 0.5rem;
+  margin-right: 3rem;
 }/*# sourceMappingURL=WorkPageItemCard.css.map */

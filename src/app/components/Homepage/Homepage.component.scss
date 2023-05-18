@@ -1,13 +1,35 @@
 .homepage{
 	display: block;
-    margin-top: 2.1rem;
+    margin-top: 1.3rem;
 	position: relative;
 	h1{
 		margin: 0;
 		padding: 0;
-		margin-left: -.5rem;
+		// margin-left: -27rem;
+		margin-bottom: 3rem;
 		font-size: 8rem;
 	}
+	.head-anim{
+		transition: all 0.5s;
+        -webkit-text-stroke: 4px #3d3d3d;
+        font-variation-settings: "wght" 900, "ital" 1;
+        font-size: 10rem;
+        text-align: left;
+        color: transparent;
+        font-family: "Meta", sans-serif;
+        text-shadow: 10px 10px 0px #07bccc,
+          15px 15px 0px #e601c0,
+          20px 20px 0px #e9019a,
+          25px 25px 0px #f40468,
+          45px 45px 10px #482896;
+          cursor: pointer;
+
+		  &:hover {
+			font-variation-settings: "wght" 100, "ital" 0;
+			text-shadow: none;
+		  }
+     }
+
 	.homepage-head{
 		background: linear-gradient(
         to right,
@@ -39,7 +61,7 @@
 
 	.homepage-social-logos{
 		display: flex;
-        margin-top: 8rem;
+        margin-top: 6rem;
 		img{
 			width: 50px;
 			height: 50px;
