@@ -4,6 +4,13 @@ header{
   width: 100%;	
   height: fit-content;
   display: flex;
+  position: sticky;
+  top:1rem;
+  z-index: 888;
+  padding: 0 2rem;
+  border-radius: 20px;
+//   backdrop-filter: blur(10px);
+//   background-color: #dededea9;
   align-items: center;
   justify-content: space-between;
 	

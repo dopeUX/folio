@@ -3,6 +3,11 @@ header {
   height: -moz-fit-content;
   height: fit-content;
   display: flex;
+  position: sticky;
+  top: 1rem;
+  z-index: 888;
+  padding: 0 2rem;
+  border-radius: 20px;
   align-items: center;
   justify-content: space-between;
 }

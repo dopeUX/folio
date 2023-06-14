@@ -12,8 +12,10 @@
 }
 
 body {
-  background-color: #f2f2f2;
-  color: black;
+  width: 100%;
+  background-color: #eeeeee;
+  color: rgb(24, 24, 24);
+  height: 100%;
 }
 
 .dark-theme {
@@ -22,7 +24,7 @@ body {
 }
 
 .light-theme {
-  background-color: #f2f2f2;
+  background-color: #876464;
   color: black;
 }
 

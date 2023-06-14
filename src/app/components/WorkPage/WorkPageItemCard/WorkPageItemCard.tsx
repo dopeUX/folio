@@ -1,15 +1,22 @@
 /* eslint-disable no-mixed-spaces-and-tabs */
-import React from "react";
+import React, { useState } from "react";
 import './WorkPageItemCard.css';
 import workData from "../../../data/projectsData";
 
-const WorkPageItemCard:React.FC<any> = ({prop}) =>{
+const WorkPageItemCard:React.FC<any> = ({keyy}) =>{
+	const [isShuffled, setIsShuffled] = useState(false);
 	return (
-		<div className="work-page-item-card">
-          <section className="item-card-image-section">
-			<img className="image1" src="/public/assets/scoopsnsmiles1.png" alt="" />
-			<img className="image2" src="/public/assets/scoopsnsmiles2.png" alt="" />
-			<img className="image3" src="/public/assets/scoopsnsmiles3.png" alt="" />
+		<div className={`work-page-item-card ${keyy===0 ? 'row' : 'reverse-row'}`}>
+          <section className={`${isShuffled && 'item-card-image-section-shuffled'} item-card-image-section-cards`} 
+		  onMouseEnter={()=>{
+			setIsShuffled(true);
+		  }}
+		  onMouseLeave={()=>{
+			setIsShuffled(false);
+		  }}>
+			<img className="image1" src="/public/assets/scoopsnsmiles1.jpeg" alt="" />
+			<img className="image2" src="/public/assets/scoopsnsmiles2.jpeg" alt="" />
+			<img className="image3" src="/public/assets/scoopsnsmiles3.jpeg" alt="" />
 		  </section>
 
 		  <section className="item-card-details-section">

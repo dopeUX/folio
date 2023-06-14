@@ -3,7 +3,6 @@
   height: 100%;
   position: absolute;
   z-index: 9999;
-  background-color: rgb(0, 0, 0);
   overflow-y: none;
   top: 0%;
 }
@@ -75,12 +74,13 @@
   z-index: 99999;
   justify-content: center;
   align-items: center;
-  background-color: rgba(28, 28, 28, 0.978);
 }
 .loading-screen .loading-screen-wrapper p {
-  opacity: 1;
+  width: 500px;
+  text-align: center;
+  opacity: 0;
   transform: translateY(0rem);
-  color: white;
+  color: black;
   font-size: 1.3rem;
   font-family: NeueMontreal-Medium, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }

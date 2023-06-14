@@ -17,3 +17,8 @@
 	font-family: 'NeueMontreal-Bold';
 	src: url('./fonts/NeueMontreal-Bold.otf') format('opentype');
 }
+
+@font-face {
+	font-family: 'Shalma';
+	src: url('./fonts/Shalma.otf') format('opentype');
+}

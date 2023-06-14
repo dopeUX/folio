@@ -36,13 +36,16 @@ const Screen: React.FC<any> = () => {
     screenRef.current.style.transform = screenZoomState;
   }, [screenZoomState]);
   return (
-    <div ref={screenRef} className="screen light-theme">
+  //  <div className="screen-wrapper">
+    <div ref={screenRef} className="screen" style={{zIndex:12}}>
       <Header logoTitle="Dé" />
       {/* ///All Routes -------------- */}
-      <Routes>
-        <Route path="/" Component={Homepage}/>
-        <Route path="/work" Component={WorkPage}/>
-      </Routes>
+      <section className="hero-section">
+        <Routes>
+         <Route path="/" Component={Homepage}/>
+         <Route path="/work" Component={WorkPage}/>
+        </Routes>
+      </section>
       {/* <Homepage /> */}
       <a
         href=""
@@ -60,6 +63,7 @@ const Screen: React.FC<any> = () => {
         </div>
       </a>
     </div>
+    // </div> 
   );
 };
 

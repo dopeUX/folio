@@ -6,7 +6,7 @@ import { RootState } from "../../store/store";
 import colorPallete from "../../data/colorPallete";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { updateIsLoading, updateIsLoadingScreenTurnedOn, updateNavScreenState, updateScreenZoomState } from "../../store/AppSlice";
+import { updateIsLoading, updateIsLoadingScreenTurnedOn, updateLoadingMusicState, updateNavScreenState, updateScreenZoomState } from "../../store/AppSlice";
 interface NavbarProps {
   navItems: Array<any>;
   onItemHover: any;
@@ -49,6 +49,7 @@ const Navbar: React.FC<NavbarProps> = ({ navItems, onItemHover }) => {
             <a className={`nav-item-a ${currentItemActive===index ? 'gradient-anim' : ""}`} href="" onClick={(e)=>{
               e.preventDefault();
               dispatch(updateIsLoading(true));
+              // dispatch(updateLoadingMusicState(true));
               dispatch(updateIsLoadingScreenTurnedOn(true));
               dispatch(updateScreenZoomState("scale(1)"));
               setTimeout(() => {

@@ -6,6 +6,7 @@ import { updateIsLoadingScreenTurnedOn } from "../../store/AppSlice";
 import './WorkPage.component.css';
 import colorPallete from "../../data/colorPallete";
 import WorkPageItemCard from "./WorkPageItemCard/WorkPageItemCard";
+import workData from "../../data/projectsData";
 
 const WorkPage:React.FC<any> = () =>{
 	const dispatch = useDispatch();
@@ -19,13 +20,15 @@ const WorkPage:React.FC<any> = () =>{
       if(isLoadingScreenTurnedOn){
 		setTimeout(()=>{
 		    dispatch(updateIsLoadingScreenTurnedOn(false));	
-		},7000)
+		},5000)
 	  }
 	},[])
 	return (
 		<div className="work-page">
           <h1 style={{color:colorPallete[colorPalleteIndex].colorHex}}>work.</h1>
-		  <WorkPageItemCard/>
+		  {workData.map((item, index:number)=>{
+			return <WorkPageItemCard keyy={index}/>
+		  })}
 		</div>
 	)
 }

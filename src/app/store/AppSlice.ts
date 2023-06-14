@@ -1,6 +1,7 @@
 /* eslint-disable no-mixed-spaces-and-tabs */
 import { createSlice } from "@reduxjs/toolkit";
 import colorPallete from "../data/colorPallete";
+import loadingMusic from "../data/loadingMusic";
 
 const initialState = {
 	showNavScreen:false,
@@ -11,7 +12,9 @@ const initialState = {
 	isLoading:false,
 	loadingScreenAnim:'',
 	isLoadingScreenTurnedOn:false,
-	isAppInitiallyRendered:true
+	isAppInitiallyRendered:true,
+	isLoadingMusic:false,
+	loadingMusicIndex:0
 }
 
 const AppSlice = createSlice({
@@ -43,9 +46,22 @@ const AppSlice = createSlice({
 	  },
 	  updateIsLoadingScreenTurnedOn:(state, action)=>{
 		state.isLoadingScreenTurnedOn = action.payload
+	  },
+	  updateLoadingMusicState:(state,action)=>{
+        state.isLoadingMusic = action.payload;
+	  },
+	  updateLoadingMusicIndex:(state, action)=>{
+		if(action){
+			state.loadingMusicIndex = action.payload
+		}else{
+			if(state.loadingMusicIndex < loadingMusic.length-1)
+			  state.loadingMusicIndex + 1
+			else
+			  state.loadingMusicIndex = 0  
+		}
 	  }
 	}
 })
 
-export const {updateNavScreenState, updateScreenZoomState, updateColorPalleteIndex, updateIsLoading, updateIsLoadingScreenTurnedOn} = AppSlice.actions;
+export const {updateNavScreenState, updateScreenZoomState, updateColorPalleteIndex, updateIsLoading, updateIsLoadingScreenTurnedOn, updateLoadingMusicState} = AppSlice.actions;
 export default AppSlice.reducer;
