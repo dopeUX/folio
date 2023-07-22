@@ -6,6 +6,8 @@ import OutlinedButton from "../../common/OutlinedButton/OutlinedButton";
 import { useSelector } from "react-redux";
 import { RootState } from "../../store/store";
 import colorPallete from "../../data/colorPallete";
+import ReduxActions from "../../actions/reduxActions";
+import ReduxStates from "../../actions/reduxStates";
 
 const Homepage: React.FC<any> = () => {
   //   const accentColor = useSelector((state: RootState) => {
@@ -14,6 +16,9 @@ const Homepage: React.FC<any> = () => {
   const colorPalleteIndex = useSelector((state: RootState) => {
     return state.appReducer.colorPalleteIndex;
   });
+  const reduxActions = new ReduxActions();
+  const reduxStates = new ReduxStates();
+  const isLoadingScreenTurnedOn = reduxStates.isLoadingScreenTurnedOn;
   const accentColor = colorPallete[colorPalleteIndex].colorHex;
   const imageRef: any = useRef();
   const audioRef:any = useRef(null);
@@ -21,6 +26,16 @@ const Homepage: React.FC<any> = () => {
     imageRef.current.style.filter = colorPallete[colorPalleteIndex].filter;
     // accentColor = colorPallete[colorPalleteIndex].colorHex;
   }, [colorPalleteIndex]);
+  
+  
+  useEffect(()=>{
+    if(isLoadingScreenTurnedOn){
+      setTimeout(()=>{
+        //min 1300 sec
+         reduxActions.dismissLoadingScreen();
+      },5000)
+      }
+  },[])
   useEffect(()=>{
     // audioRef.current.play()
   })
@@ -28,20 +43,10 @@ const Homepage: React.FC<any> = () => {
     <section className="homepage">
       <h1 className="homepage-head">Bonsoir!</h1>
       <p>
-        Lorem ipsum is typically a corrupted version of De finibus bonorum et
-        malorum, a 1st-century BC text by the Roman statesman and philosopher
-        Cicero, with words altered, added, and removed to make it nonsensical
-        and improper Latin.Versions of the Lorem ipsum text have been used in
-        typesetting at least since the 1960s, when it was popularized by
-        advertisements for Letraset transfer sheets.[1] Lorem ipsum was
-        introduced to the digital world in the mid-1980s, when Aldus employed it
-        in graphic and word-processing templates for its desktop publishing
-        program PageMaker. Other popular word processors, including Pages and
-        Microsoft Word, have since adopted Lorem ipsum,[2] as have many LaTeX
-        packages,[3][4][5] web content managers such as Joomla! and WordPress,
-        and CSS libraries such as Semantic UI
+       "As a skilled MERN stack developer, I embark on a journey to bring ideas to life and transform digital landscapes. With a passion for crafting seamless experiences, I specialize in leveraging the power of MongoDB, Express.js, React, and Node.js to build dynamic, scalable, and intuitive web solutions. Armed with expertise in full-stack development, I thrive on pushing boundaries and exceeding client expectations." 
       </p>
-
+     
+     <section className="bottom-container">
       <div className="homepage-social-logos">
         <a href="">
           <img
@@ -61,10 +66,19 @@ const Homepage: React.FC<any> = () => {
         </a>
       </div>
       {/* <audio id="backgroundMusic" ref={audioRef} autoPlay={true} src="/public/assets/samplemusic.mp3" controls muted={false}></audio> */}
-      <a href="" onClick={(e)=>{
+      {/* <a href="" onClick={(e)=>{
          e.preventDefault();
       }}>
-        <OutlinedButton
+      </a> */}
+      <section className="bottom-right-hlinks">
+        <a href="">
+          <p>Marketplace.</p>
+        </a>
+        <a href="">
+          <p>Read.</p>
+        </a> 
+        </section>  
+        {/* <OutlinedButton
           title="Resume"
           classN="homepage-download-btn"
           color={accentColor}
@@ -74,9 +88,9 @@ const Homepage: React.FC<any> = () => {
             src="/public/assets/download.svg"
             alt=""
           />
-        </OutlinedButton>
+        </OutlinedButton> */}
         {/* <button className="outlined-btn homepage-download-btn">Resume <img className="download-btn-icon" src="/public/assets/download.svg" alt="" /></button> */}
-      </a>
+        </section>
     </section>
   );
 };

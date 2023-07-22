@@ -10,28 +10,31 @@ import {
 import Sound from 'react-sound';
 import sampleMusic from '../../../assets/samplemusic.mp3';
 import {Howl, Howler} from 'howler';
+import ReduxActions from "../../actions/reduxActions";
+import ReduxStates from "../../actions/reduxStates";
 
 const LoadingScreen: React.FC<any> = () => {
-  const isLoading = useSelector((state: RootState) => {
-    return state.appReducer.isLoading;
-  });
-  const isLoadingScreenTurnedOn = useSelector((state: RootState) => {
-    return state.appReducer.isLoadingScreenTurnedOn;
-  });
+  const reduxStates = new ReduxStates();
+  const isLoading = reduxStates.isLoading;
+  const isLoadingScreenTurnedOn = reduxStates.isLoadingScreenTurnedOn;
   const dispatch = useDispatch();
   const loadingScreenRef: any = useRef();
   const bgImageRef: any = useRef();
   const initialRender = useRef(true);
   const quoteRef: any = useRef();
+  const wrapperImageRef:any = useRef();
   const [isPlaying, setIsPlaying] = useState('');
   const audioRef:any = useRef(null);
   const [screenY, setScreenY] = useState(0);
   const [muted, setMuted]:any = useState(true);
+  const reduxActions = new ReduxActions();
+
   useEffect(() => {
     // console.log("pppp");
     // const audio:any = new Howl({src:'/public/assets/samplemusic.mp3'});
     // audio.play()
     initialRender.current = true;
+    loadingScreenRef.current.click();
     // setMuted(true)
     // audioRef.current.play()
   }, []);
@@ -56,6 +59,7 @@ const LoadingScreen: React.FC<any> = () => {
     if (isLoadingScreenTurnedOn) {
       loadingScreenRef.current.style.animation = "slideDown .6s forwards ease";
       bgImageRef.current.style.animation = "slideDownImage .6s forwards ease";
+      wrapperImageRef.current.style.animation = "zoom-in .6s forwards ease";
       setTimeout(() => {
         quoteRef.current.style.animation = "textAnim 1.3s forwards ease";
       }, 750);
@@ -66,12 +70,14 @@ const LoadingScreen: React.FC<any> = () => {
       quoteRef.current.style.animation = "textAnimRemove .4s forwards ease";
       dispatch(updateLoadingMusicState(false));
       setTimeout(() => {
+        //must be less than 1200
         loadingScreenRef.current.style.animation = "slideUp .6s forwards ease";
         bgImageRef.current.style.animation = "slideUpImage .6s forwards ease";
+        // wrapperImageRef.current.style.animation = "zoom-out .6s forwards ease";
       }, 300);
-      setTimeout(() => {
-        dispatch(updateIsLoading(false));
-      }, 1200);
+      // setTimeout(() => { //just now
+      //   reduxActions.dismissLoadingScreen();
+      // }, 1200);
       // }
     }
     initialRender.current = false;
@@ -82,11 +88,13 @@ const LoadingScreen: React.FC<any> = () => {
     <div ref={loadingScreenRef} className="loading-screen" onMouseMove={(e)=>{
       // setScreenY(e.screenY);
       // audioRef.play()
+    }} onClick={()=>{
+      console.log('clikeddd');
     }}>
       <div className="loading-screen-wrapper">
         <p ref={quoteRef}>"Bichess lie, compilers don't!"</p>
       </div>
-      <div className="loading-screen-image-wrapper">
+      <div ref={wrapperImageRef} className="loading-screen-image-wrapper">
         {/* <button
           className="test"
           onClick={() => {
@@ -99,16 +107,16 @@ const LoadingScreen: React.FC<any> = () => {
         >
           Test
         </button> */}
-        <video autoPlay style={{width:'100%', height:'100vh'}} loop muted id="myVideo">
-          <source src="/public/assets/video1.mp4" type="video/mp4"/>
+        <video ref={bgImageRef} className="vdeo" autoPlay style={{width:'100%', height:'100vh'}} loop muted id="myVideo">
+          <source src="/public/assets/video4.mp4" type="video/mp4"/>
         </video>
-        <img
-          style={{display:'none'}}
-          ref={bgImageRef}
+        {/* <img
+          // style={{display:'none'}}
+          // ref={bgImageRef}
           className="loading-screen-bg-image"
           src="/public/assets/bgimage.jpg"
           alt=""
-        />
+        /> */}
       </div>
     </div>
   );

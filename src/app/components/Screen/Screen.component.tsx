@@ -1,5 +1,5 @@
 /* eslint-disable no-mixed-spaces-and-tabs */
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./Screen.component.css";
 import Header from "../Header/Header.component";
 import Homepage from "../Homepage/Hompage.component";
@@ -13,17 +13,41 @@ import {
 import { RootState } from "../../store/store";
 import { Routes, Route } from "react-router-dom";
 import WorkPage from "../WorkPage/WorkPage.component";
+import Footer from "../Footer/Footer.component";
+import AboutPage from "../AboutPage/AboutPage.component";
+import ReduxStates from "../../actions/reduxStates";
+import ContactPage from "../ContactPage/ContactPage.component";
 
 const Screen: React.FC<any> = () => {
-  const isShowNavScreen = useSelector((state: RootState) => {
-    return state.appReducer.showNavScreen;
-  });
-  const screenZoomState = useSelector((state: RootState) => {
-    return state.appReducer.screenZoomState;
-  });
+  const reduxStates = new ReduxStates();
+  const isShowNavScreen = reduxStates.isShowNavScreen;
+  const screenZoomState = reduxStates.screenZoomState;
   const screenRef: any = useRef();
   const dispatch = useDispatch();
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [isHeaderBg, setHeaderBg] = useState(false);
+  const handleScroll = () => {
+    const position = window.pageYOffset;
+    setScrollPosition(position);
+    if(position>100){
+      setHeaderBg(true);
+    }else{
+      setHeaderBg(false);
+    }
+    console.log(position," SCROLL-POSITION");
+  };
   
+  useEffect(()=>{
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => {
+        window.removeEventListener('scroll', handleScroll);
+    };
+  },[])
+
+  useEffect(()=>{
+    console.log(reduxStates.isNavScreenOn, 'plllll');
+  })
+
   useEffect(()=>{
     setTimeout(() => {
       dispatch(updateIsLoadingScreenTurnedOn(false));
@@ -38,30 +62,18 @@ const Screen: React.FC<any> = () => {
   return (
   //  <div className="screen-wrapper">
     <div ref={screenRef} className="screen" style={{zIndex:12}}>
-      <Header logoTitle="Dé" />
+      <Header logoTitle="Dé" headerBgOn={isHeaderBg}/>
       {/* ///All Routes -------------- */}
       <section className="hero-section">
         <Routes>
          <Route path="/" Component={Homepage}/>
          <Route path="/work" Component={WorkPage}/>
+         <Route path="/about" Component={AboutPage}/>
+         <Route path="/reach" Component={ContactPage}/>
         </Routes>
       </section>
       {/* <Homepage /> */}
-      <a
-        href=""
-        onClick={(e) => {
-          e.preventDefault();
-        }}
-      >
-        <div className="screen-nav-button">
-          <Hamburger
-            onMenuClick={() => {
-              dispatch(updateNavScreenState());
-              dispatch(updateScreenZoomState("scale(0.95)"));
-            }}
-          />
-        </div>
-      </a>
+      <Footer/>
     </div>
     // </div> 
   );

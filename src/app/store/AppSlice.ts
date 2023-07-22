@@ -14,7 +14,8 @@ const initialState = {
 	isLoadingScreenTurnedOn:false,
 	isAppInitiallyRendered:true,
 	isLoadingMusic:false,
-	loadingMusicIndex:0
+	loadingMusicIndex:0,
+	isMusicPlayerVisible:false
 }
 
 const AppSlice = createSlice({
@@ -24,8 +25,8 @@ const AppSlice = createSlice({
 	  updateIsAppInitiallyRendered:(state)=>{
         state.isAppInitiallyRendered = false;
 	  },
-	  updateNavScreenState:(state)=>{
-		state.showNavScreen = !state.showNavScreen;
+	  updateNavScreenState:(state, action)=>{
+		state.showNavScreen = action.payload;
 	  },
 	  updateScreenZoomState:(state, action)=>{
 		state.screenZoomState = action.payload;
@@ -59,9 +60,20 @@ const AppSlice = createSlice({
 			else
 			  state.loadingMusicIndex = 0  
 		}
+	  },
+	  updateIsMusicPlayerVisible:(state, action)=>{
+		 state.isMusicPlayerVisible = action.payload;
 	  }
 	}
 })
 
-export const {updateNavScreenState, updateScreenZoomState, updateColorPalleteIndex, updateIsLoading, updateIsLoadingScreenTurnedOn, updateLoadingMusicState} = AppSlice.actions;
+export const {
+	updateNavScreenState, 
+	updateScreenZoomState, 
+	updateColorPalleteIndex, 
+	updateIsLoading, 
+	updateIsLoadingScreenTurnedOn, 
+	updateLoadingMusicState,
+    updateIsMusicPlayerVisible
+} = AppSlice.actions;
 export default AppSlice.reducer;

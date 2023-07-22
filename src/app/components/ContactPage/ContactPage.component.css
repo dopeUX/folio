@@ -1,0 +1,29 @@
+.contact-page h1 {
+  margin: 0;
+  font-size: 8rem;
+  transition: font-size 0.3s ease;
+}
+.contact-page .contact-page-form {
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-top: 2rem;
+}
+.contact-page .contact-page-form .contact-tiles-link {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0.2rem;
+  margin-top: 0.5rem;
+}
+.contact-page .contact-page-form .contact-tiles-link img {
+  width: 30px;
+  height: 30px;
+}
+.contact-page .contact-page-form .contact-tiles-link p {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: 1rem;
+}/*# sourceMappingURL=ContactPage.component.css.map */

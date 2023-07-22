@@ -10,13 +10,13 @@ const navItems = [
 	  name:'me',
 	  title:'me?',
 	  navImage:'/me-nav',
-	  route:'/'	
+	  route:'/about'	
 	},
 	{
 	  name:'reach',
 	  title:'reach.',
 	  navImage:'/reach-nav',
-	  route:'/'
+	  route:'/reach'
 	}
 ]
 

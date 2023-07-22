@@ -1,0 +1,39 @@
+.about-page {
+  text-align: left;
+  position: relative;
+}
+.about-page h1 {
+  font-size: 8rem;
+  margin: 0;
+}
+.about-page .title-desc {
+  width: 620px;
+  color: rgb(128, 128, 128);
+  z-index: 81;
+}
+.about-page .about-page-image {
+  position: absolute;
+  right: 5rem;
+  top: 8rem;
+  width: 27rem;
+  z-index: -1;
+}
+.about-page .detailed-section {
+  margin-top: 2rem;
+}
+.about-page .detailed-section .about-page-tile {
+  margin-top: 2rem;
+}
+.about-page .detailed-section .about-page-tile ul {
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  width: 300px;
+  display: grid;
+  grid-row-gap: 20px;
+  list-style-type: none;
+  grid-template-columns: 150px 150px;
+}
+.about-page .detailed-section .about-page-tile ul li {
+  margin-right: 3rem;
+}/*# sourceMappingURL=AboutPage.component.css.map */

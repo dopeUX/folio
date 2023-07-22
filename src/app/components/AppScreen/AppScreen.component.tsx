@@ -11,24 +11,26 @@ import BlurOverlayLoadingScreen from "../BlurOverlayLoadignScreen/BlurOverlayLoa
 import {
   updateIsLoading,
   updateIsLoadingScreenTurnedOn,
+  updateNavScreenState,
+  updateScreenZoomState,
 } from "../../store/AppSlice";
 import {Canvas} from "@react-three/fiber";
 import {OrbitControls} from "@react-three/drei";
 import {useGLTF, Stage, PresentationControls} from "@react-three/drei";
+import Hamburger from "../../common/Hamburger/Hamburger";
+import ReduxActions from "../../actions/reduxActions";
+import ReduxStates from "../../actions/reduxStates";
 
 const AppScreen: React.FC<any> = () => {
-  const isNavScreenOn = useSelector((state: RootState) => {
-    return state.appReducer.showNavScreen;
-  });
-  const isLoading = useSelector((state: RootState) => {
-    return state.appReducer.isLoading;
-  });
-  const isLoadingMusic = useSelector((state:RootState) => {
-    return state.appReducer.isLoadingMusic;
-  })
+  const reduxStates = new ReduxStates();
+  const isNavScreenOn = reduxStates.isNavScreenOn;
+  const isLoading = reduxStates.isLoading;
+  const isLoadingMusic = reduxStates.isLoadingMusic;
   const [isAppInitiallyRendered, setIsAppInitiallyRendered] = useState(true);
   const dispatch = useDispatch();
   const audioRef:any = useRef();
+  const demoRef:any = useRef();
+  const reduxActions = new ReduxActions();
   
   // useEffect(()=>{
   //   console.log(isLoading)
@@ -61,18 +63,23 @@ const AppScreen: React.FC<any> = () => {
   // },[isLoadingMusic])
   
   useEffect(()=>{
+    demoRef.current.click();
     if(isAppInitiallyRendered){
-      dispatch(updateIsLoading(true));
-      dispatch(updateIsLoadingScreenTurnedOn(true));
+      reduxActions.showLoadingScreen();
+      // dispatch(updateIsLoading(true));
+      // dispatch(updateIsLoadingScreenTurnedOn(true));
       setTimeout(()=>{
         setIsAppInitiallyRendered(false);
       },1000)
     }
+  
   },[]);
 
 
   return (
-    <div className="AppScreen">
+    <div ref={demoRef} className="AppScreen" onClick={()=>{
+      console.log('halooo')
+    }}>
       {/* <Box/> */}
       {/* {isLoading && <BlurOverlayLoadingScreen />} */}
       {isLoading && <LoadingScreen />}
@@ -85,7 +92,22 @@ const AppScreen: React.FC<any> = () => {
         >
         click
       </button> */}
+      <a
+        href=""
+        onClick={(e) => {
+          e.preventDefault();
+        }}
+      >
+        <div className="screen-nav-button">
+          <Hamburger
+            onMenuClick={() => {
+              reduxActions.showNavigationScreen();
+            }}
+          />
+        </div>
+      </a>
       {/* /////////////? */}
+      {reduxStates.isMusicPlayerVisible && musicApp()}
       {/* <audio style={{display:'none'}} id="backgroundMusic" ref={audioRef} autoPlay={true} src="/public/assets/paranoid.mp3" controls muted={false}></audio> */}
       {isNavScreenOn && <Navigation isNavScreenOn={isNavScreenOn} />}
       {
@@ -94,5 +116,18 @@ const AppScreen: React.FC<any> = () => {
     </div>
   );
 };
+
+function musicApp(){
+  return (
+     <div className="music-player">
+        <img src="assets/music-icon.svg" alt="" />
+        <div className="music-details">
+           <h4>Eenie Meenie</h4>
+           <p>Justin Bieber, Sean kinsgton</p>
+        </div>
+        <img className="music-play" src="assets/music-play.svg" alt="" />
+      </div>
+  )
+}
 
 export default AppScreen;

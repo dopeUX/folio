@@ -7,26 +7,27 @@ import colorPallete from "../../data/colorPallete";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { updateIsLoading, updateIsLoadingScreenTurnedOn, updateLoadingMusicState, updateNavScreenState, updateScreenZoomState } from "../../store/AppSlice";
+import ReduxActions from "../../actions/reduxActions";
+import ReduxStates from "../../actions/reduxStates";
 interface NavbarProps {
   navItems: Array<any>;
   onItemHover: any;
 }
 const Navbar: React.FC<NavbarProps> = ({ navItems, onItemHover }) => {
-  const isAccentColor = useSelector((state: RootState) => {
-    return state.appReducer.isAccentColor;
-  });
+  const reduxActions = new ReduxActions();
+  const reduxStates = new ReduxStates();
+  const isAccentColor = reduxStates.accentColor;
   // const accentColor = useSelector((state:RootState)=>{
   // 	return state.appReducer.accentColor;
   // })
   const dispatch = useDispatch();
-  const colorPalleteIndex = useSelector((state: RootState) => {
-    return state.appReducer.colorPalleteIndex;
-  });
+  const colorPalleteIndex = reduxStates.colorPalleteIndex;
   const navigate = useNavigate();
   const navListItemRef:any = useRef();
   const [currentItemActive, setCurrentItemActive] = useState<number|null>(null);
   const accentColor = colorPallete[colorPalleteIndex].colorHex;
   const itemRef: any = useRef();
+  
 
   useLayoutEffect(() => {
     if (!isAccentColor) {
@@ -48,18 +49,8 @@ const Navbar: React.FC<NavbarProps> = ({ navItems, onItemHover }) => {
            }}>
             <a className={`nav-item-a ${currentItemActive===index ? 'gradient-anim' : ""}`} href="" onClick={(e)=>{
               e.preventDefault();
-              dispatch(updateIsLoading(true));
-              // dispatch(updateLoadingMusicState(true));
-              dispatch(updateIsLoadingScreenTurnedOn(true));
-              dispatch(updateScreenZoomState("scale(1)"));
-              setTimeout(() => {
-                dispatch(updateNavScreenState());
-              }, 600);
-
-              setTimeout(()=>{
-                navigate(navItems[index].route)
-              },1300)  
-            }}>
+              reduxActions.changeRoute(navItems[index].route);
+             }}>
               {item.title}
             </a>
           </li>

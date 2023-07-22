@@ -13,9 +13,12 @@ import {
 import { RootState } from "../../store/store";
 import colorPallete from "../../data/colorPallete";
 import { Navigate } from "react-router-dom"; 
+import ReduxActions from "../../actions/reduxActions";
+import ReduxStates from "../../actions/reduxStates";
 
 const Navigation: React.FC<any> = ({ isNavScreenOn }) => {
   const navScreenRef: any = useRef();
+  const reduxStates = new ReduxStates();
   const [currentNavIndex, setCurrentNavIndex] = useState(0);
   const isAccentColor = useSelector((state: RootState) => {
     return state.appReducer.isAccentColor;
@@ -25,23 +28,19 @@ const Navigation: React.FC<any> = ({ isNavScreenOn }) => {
   // const accentColor = useSelector((state:RootState)=>{
   // 	return state.appReducer.accentColor;
   // })
-  const colorPalleteIndex = useSelector((state: RootState) => {
-    return state.appReducer.colorPalleteIndex;
-  });
+  const colorPalleteIndex = reduxStates.colorPalleteIndex;
   const accentColor = colorPallete[colorPalleteIndex].colorHex;
   const dispatch = useDispatch();
   const color = accentColor;
 
   const navItemsRef: any = useRef();
-  
+  const reduxActions = new ReduxActions();
+
   const [clickedOutside, setClickedOutside] = useState(false);
   const handleClickOutside = (e: any) => {
     if (!navItemsRef.current.contains(e.target)) {
       navScreenRef.current.style.opacity = 0;
-      dispatch(updateScreenZoomState("scale(1)"));
-      setTimeout(() => {
-        dispatch(updateNavScreenState());
-      }, 600);
+      reduxActions.dismissNavigationScreen();
       setClickedOutside(true);
     }
   };
@@ -86,19 +85,10 @@ const Navigation: React.FC<any> = ({ isNavScreenOn }) => {
        {<img ref={navImageRef} src={`/public/assets/${navItems[currentNavIndex].navImage}.png`} alt="" />}
        </div>
       <div
-        className="nav-screen-wrapper"
-        onMouseEnter={() => {
-          //   console.log('entered')
-        }}
-        onMouseLeave={() => {
-          // navScreenRef.current.style.opacity = 0;
-          // dispatch(updateScreenZoomState("scale(1)"));
-          // setTimeout(() => {
-          //   dispatch(updateNavScreenState());
-          // }, 600);
-          //   console.log('left')
-        }}
-      >
+        className="nav-screen-wrapper">
+        <h3 onClick={()=>{
+          reduxActions.changeRoute('/');
+        }}>De</h3>
         <div
           className="nav-items"
           ref={navItemsRef}
@@ -115,6 +105,10 @@ const Navigation: React.FC<any> = ({ isNavScreenOn }) => {
             setCurrentNavIndex(e)
           }}/>
         </div>
+        <section className="bottom-links">
+           <p>Marketplace.</p>
+           <p>Read.</p>
+        </section>
       </div>
     </div>
   );

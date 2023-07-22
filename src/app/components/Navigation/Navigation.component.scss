@@ -1,10 +1,11 @@
 @import '../../styles/globalStyles.scss';
 
 .navigation-screen{
-	position: absolute;
+	position: fixed;
 	z-index: 999;
 	width: 100%;
 	height: 100%;
+	background: rgba(255, 255, 255, 0.581);
     backdrop-filter: blur(10px);
 	// visibility: hidden;
 	opacity: 0;
@@ -39,11 +40,34 @@
 		height: 100%;
 		display: flex;
 		flex-direction: column;
+		align-items: end;
 		// background-color: black;
-		 
+		  h3{
+			width: fit-content;
+			margin-top: 6rem;
+			margin-right: 11rem;
+			font-size: 2rem;
+			cursor: pointer;
+		  }
 		  .nav-items{
 			height: fit-content;
 			margin: auto 10rem 7rem auto;
+		  }
+
+		  .bottom-links{
+			margin-right: 11rem;
+			display: flex;
+			position: absolute;
+			color: $primary-col;	
+			  right: 0;
+			  bottom: 0;
+
+			p{
+		      font-size: 1rem;		
+			  cursor: pointer;
+			  margin-left: 2rem;
+			  margin-bottom: 2rem;	
+			}
 		  }
 	}	
    

@@ -11,11 +11,17 @@
   display: flex;
 }
 
+.container {
+  padding: 1rem 2rem;
+}
+
 body {
   width: 100%;
   background-color: #eeeeee;
   color: rgb(24, 24, 24);
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .dark-theme {
