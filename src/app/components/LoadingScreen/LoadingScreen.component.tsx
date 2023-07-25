@@ -83,7 +83,7 @@ const LoadingScreen: React.FC<any> = () => {
   }, [isLoadingScreenTurnedOn]);
 
   return (
-    <div ref={loadingScreenRef} className="loading-screen" onMouseMove={(e)=>{
+    <div ref={loadingScreenRef} className="loading-screen" onMouseMove={()=>{
       // setScreenY(e.screenY);
       // audioRef.play()
     }} onClick={()=>{
