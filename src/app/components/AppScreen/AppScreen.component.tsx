@@ -14,9 +14,6 @@ import {
   updateNavScreenState,
   updateScreenZoomState,
 } from "../../store/AppSlice";
-import {Canvas} from "@react-three/fiber";
-import {OrbitControls} from "@react-three/drei";
-import {useGLTF, Stage, PresentationControls} from "@react-three/drei";
 import Hamburger from "../../common/Hamburger/Hamburger";
 import ReduxActions from "../../actions/reduxActions";
 import ReduxStates from "../../actions/reduxStates";

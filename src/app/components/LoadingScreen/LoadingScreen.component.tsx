@@ -7,9 +7,7 @@ import {
   updateIsLoadingScreenTurnedOn,
   updateLoadingMusicState,
 } from "../../store/AppSlice";
-import Sound from 'react-sound';
-import sampleMusic from '../../../assets/samplemusic.mp3';
-import {Howl, Howler} from 'howler';
+// import sampleMusic from '../../../assets/samplemusic.mp3';
 import ReduxActions from "../../actions/reduxActions";
 import ReduxStates from "../../actions/reduxStates";
 
