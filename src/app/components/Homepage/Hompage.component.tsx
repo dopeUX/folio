@@ -52,7 +52,7 @@ const Homepage: React.FC<any> = () => {
           <img
             ref={imageRef}
             className={`${colorPallete[colorPalleteIndex].name}`}
-            src="/public/assets/github-logo.svg"
+            src="/assets/github-logo.svg"
             alt=""
           />
         </a>
@@ -60,7 +60,7 @@ const Homepage: React.FC<any> = () => {
           <img
             ref={imageRef}
             className={`${colorPallete[colorPalleteIndex].name}`}
-            src="/public/assets/linkedin-logo.svg"
+            src="/assets/linkedin-logo.svg"
             alt=""
           />
         </a>
