@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, Suspense } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import '../font.css'
@@ -16,7 +16,9 @@ function App() {
   const dispatch = useDispatch();
   return (
     <>
-     <AppScreen/>
+     <Suspense fallback={<div>Loading</div>}>
+      <AppScreen/>
+     </Suspense>
     </>
   )
 }
