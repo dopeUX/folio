@@ -106,7 +106,7 @@ const AppScreen: React.FC<any> = () => {
       {/* /////////////? */}
       {reduxStates.isMusicPlayerVisible && musicApp()}
       {/* <audio style={{display:'none'}} id="backgroundMusic" ref={audioRef} autoPlay={true} src="/public/assets/paranoid.mp3" controls muted={false}></audio> */}
-      {isNavScreenOn && <Navigation isNavScreenOn={isNavScreenOn} />}
+      {<Navigation isNavScreenOn={isNavScreenOn}/>}
       {
         !isAppInitiallyRendered && <Screen/>
       }
