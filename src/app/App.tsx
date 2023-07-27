@@ -15,13 +15,14 @@ function App() {
     return state.appReducer.showNavScreen
   })
 
-  let count = 0;
+  const [count, setCount] = useState<number>(0);
   const [loading , setLoading] = useState<boolean>(true);
   useEffect(()=>{
     if(count==3){
       setLoading(false);
     }
-  },[])
+    console.log(count, ' =>COUNT')
+  },[count])
   const dispatch = useDispatch();
   return (
     <>
@@ -31,13 +32,13 @@ function App() {
      }
      {/* </Suspense> */}
      <img src="/assets/work-nav.svg" style={{display:'none'}} onLoad={()=>{
-       count = count+1;
+       setCount(x=>x+1)
      }} alt="" />
      <img src="/assets/me-nav.svg" style={{display:'none'}} onLoad={()=>{
-       count = count+1
+       setCount(x=>x+1)
      }} alt="" />
      <img src="/assets/reach-nav.svg" style={{display:'none'}} onLoad={()=>{
-      count=count+1
+      setCount(x=>x+1)
      }}  alt="" />
     </>
   )
