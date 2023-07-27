@@ -1,4 +1,4 @@
-import React, { useState, Suspense } from 'react'
+import React, { useState,useEffect, Suspense } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import '../font.css'
@@ -14,12 +14,31 @@ function App() {
   const counter = useSelector((state:RootState)=>{
     return state.appReducer.showNavScreen
   })
+
+  let count = 0;
+  const [loading , setLoading] = useState<boolean>(true);
+  useEffect(()=>{
+    if(count==3){
+      setLoading(false);
+    }
+  },[])
   const dispatch = useDispatch();
   return (
     <>
-     <Suspense fallback={<div>Loading</div>}>
-      <AppScreens/>
-     </Suspense>
+     {/* <Suspense fallback={<div>Loading</div>}> */}
+     {
+      !loading ? <AppScreen/> : <div>loading...</div>
+     }
+     {/* </Suspense> */}
+     <img src="/assets/work-nav.svg" style={{display:'none'}} onLoad={()=>{
+       count = count+1;
+     }} alt="" />
+     <img src="/assets/me-nav.svg" style={{display:'none'}} onLoad={()=>{
+       count = count+1
+     }} alt="" />
+     <img src="/assets/reach-nav.svg" style={{display:'none'}} onLoad={()=>{
+      count=count+1
+     }}  alt="" />
     </>
   )
 }
