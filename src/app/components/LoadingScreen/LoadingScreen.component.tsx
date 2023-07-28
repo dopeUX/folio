@@ -1,4 +1,4 @@
-import React, { useEffect,useState, useRef, useLayoutEffect } from "react";
+import React, { useEffect, useState, useRef, useLayoutEffect } from "react";
 import "./LoadingScreen.component.css";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../store/store";
@@ -20,11 +20,11 @@ const LoadingScreen: React.FC<any> = () => {
   const bgImageRef: any = useRef();
   const initialRender = useRef(true);
   const quoteRef: any = useRef();
-  const wrapperImageRef:any = useRef();
-  const [isPlaying, setIsPlaying] = useState('');
-  const audioRef:any = useRef(null);
+  const wrapperImageRef: any = useRef();
+  const [isPlaying, setIsPlaying] = useState("");
+  const audioRef: any = useRef(null);
   const [screenY, setScreenY] = useState(0);
-  const [muted, setMuted]:any = useState(true);
+  const [muted, setMuted]: any = useState(true);
   const reduxActions = new ReduxActions();
 
   useEffect(() => {
@@ -38,22 +38,21 @@ const LoadingScreen: React.FC<any> = () => {
   }, []);
 
   useEffect(() => {
-    if(audioRef.current){
+    if (audioRef.current) {
       // audioRef.current.play()
     }
-  }, [audioRef])
+  }, [audioRef]);
 
-  useEffect(()=>{
+  useEffect(() => {
     // console.log(audioRef.current.currentTime,'ooooooo')
     // audioRef.current.currentTime = 14
     // audioRef.current.volume = 0.7
-    // audioRef.current.play() 
-  },[])
-  
+    // audioRef.current.play()
+  }, []);
 
   useEffect(() => {
     // if (!initialRender.current) {
-      ///loading the component ----
+    ///loading the component ----
     if (isLoadingScreenTurnedOn) {
       loadingScreenRef.current.style.animation = "slideDown .6s forwards ease";
       bgImageRef.current.style.animation = "slideDownImage .6s forwards ease";
@@ -64,7 +63,8 @@ const LoadingScreen: React.FC<any> = () => {
       // setTimeout(()=>{
       //   quoteRef.current.style.animation = "textAnimSlideUpSlow 12s forwards ease"
       // },1000)
-    } else { /// destroying the component ----
+    } else {
+      /// destroying the component ----
       quoteRef.current.style.animation = "textAnimRemove .4s forwards ease";
       dispatch(updateLoadingMusicState(false));
       setTimeout(() => {
@@ -83,12 +83,17 @@ const LoadingScreen: React.FC<any> = () => {
   }, [isLoadingScreenTurnedOn]);
 
   return (
-    <div ref={loadingScreenRef} className="loading-screen" onMouseMove={()=>{
-      // setScreenY(e.screenY);
-      // audioRef.play()
-    }} onClick={()=>{
-      console.log('clikeddd');
-    }}>
+    <div
+      ref={loadingScreenRef}
+      className="loading-screen"
+      onMouseMove={() => {
+        // setScreenY(e.screenY);
+        // audioRef.play()
+      }}
+      onClick={() => {
+        console.log("clikeddd");
+      }}
+    >
       <div className="loading-screen-wrapper">
         <p ref={quoteRef}>"Bichess lie, compilers don't!"</p>
       </div>
@@ -105,8 +110,16 @@ const LoadingScreen: React.FC<any> = () => {
         >
           Test
         </button> */}
-        <video ref={bgImageRef} className="vdeo" autoPlay style={{width:'100%', height:'100vh'}} loop muted id="myVideo">
-          <source src="/public/assets/video4.mp4" type="video/mp4"/>
+        <video
+          ref={bgImageRef}
+          className="vdeo"
+          autoPlay
+          style={{ width: "100%", height: "100vh" }}
+          loop
+          muted
+          id="myVideo"
+        >
+          <source src="/assets/video4.mp4" type="video/mp4" />
         </video>
         {/* <img
           // style={{display:'none'}}
