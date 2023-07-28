@@ -25,10 +25,10 @@ const AppScreen: React.FC<any> = () => {
   const isLoadingMusic = reduxStates.isLoadingMusic;
   const [isAppInitiallyRendered, setIsAppInitiallyRendered] = useState(true);
   const dispatch = useDispatch();
-  const audioRef:any = useRef();
-  const demoRef:any = useRef();
+  const audioRef: any = useRef();
+  const demoRef: any = useRef();
   const reduxActions = new ReduxActions();
-  
+
   // useEffect(()=>{
   //   console.log(isLoading)
   //   if(isLoadingMusic){
@@ -42,7 +42,7 @@ const AppScreen: React.FC<any> = () => {
   //     },500)
   //     setTimeout(()=>{
   //       clearInterval(intv);
-  //     },4000)   
+  //     },4000)
   //   }else{
   //     const intv = setInterval(()=>{
   //       if(audioRef.current.volume>=0.2){
@@ -58,25 +58,27 @@ const AppScreen: React.FC<any> = () => {
   //   }
 
   // },[isLoadingMusic])
-  
-  useEffect(()=>{
+
+  useEffect(() => {
     demoRef.current.click();
-    if(isAppInitiallyRendered){
+    if (isAppInitiallyRendered) {
       reduxActions.showLoadingScreen();
       // dispatch(updateIsLoading(true));
       // dispatch(updateIsLoadingScreenTurnedOn(true));
-      setTimeout(()=>{
+      setTimeout(() => {
         setIsAppInitiallyRendered(false);
-      },1000)
+      }, 1000);
     }
-  
-  },[]);
-
+  }, []);
 
   return (
-    <div ref={demoRef} className="AppScreen" onClick={()=>{
-      console.log('halooo')
-    }}>
+    <div
+      ref={demoRef}
+      className="AppScreen"
+      onClick={() => {
+        console.log("halooo");
+      }}
+    >
       {/* <Box/> */}
       {/* {isLoading && <BlurOverlayLoadingScreen />} */}
       {isLoading && <LoadingScreen />}
@@ -106,25 +108,23 @@ const AppScreen: React.FC<any> = () => {
       {/* /////////////? */}
       {reduxStates.isMusicPlayerVisible && musicApp()}
       {/* <audio style={{display:'none'}} id="backgroundMusic" ref={audioRef} autoPlay={true} src="/public/assets/paranoid.mp3" controls muted={false}></audio> */}
-      {<Navigation isNavScreenOn={isNavScreenOn}/>}
-      {
-        !isAppInitiallyRendered && <Screen/>
-      }
+      {isNavScreenOn && <Navigation isNavScreenOn={isNavScreenOn} />}
+      {!isAppInitiallyRendered && <Screen />}
     </div>
   );
 };
 
-function musicApp(){
+function musicApp() {
   return (
-     <div className="music-player">
-        <img src="assets/music-icon.svg" alt="" />
-        <div className="music-details">
-           <h4>Eenie Meenie</h4>
-           <p>Justin Bieber, Sean kinsgton</p>
-        </div>
-        <img className="music-play" src="assets/music-play.svg" alt="" />
+    <div className="music-player">
+      <img src="assets/music-icon.svg" alt="" />
+      <div className="music-details">
+        <h4>Eenie Meenie</h4>
+        <p>Justin Bieber, Sean kinsgton</p>
       </div>
-  )
+      <img className="music-play" src="assets/music-play.svg" alt="" />
+    </div>
+  );
 }
 
 export default AppScreen;
