@@ -14,9 +14,9 @@ const WorkPageItemCard:React.FC<any> = ({keyy}) =>{
 		  onMouseLeave={()=>{
 			setIsShuffled(false);
 		  }}>
-			<img className="image1" src="/public/assets/scoopsnsmiles1.jpeg" alt="" />
-			<img className="image2" src="/public/assets/scoopsnsmiles2.jpeg" alt="" />
-			<img className="image3" src="/public/assets/scoopsnsmiles3.jpeg" alt="" />
+			<img className="image1" src="/assets/scoopsnsmiles1.jpeg" alt="" />
+			<img className="image2" src="/assets/scoopsnsmiles2.jpeg" alt="" />
+			<img className="image3" src="/assets/scoopsnsmiles3.jpeg" alt="" />
 		  </section>
 
 		  <section className="item-card-details-section">
@@ -24,12 +24,12 @@ const WorkPageItemCard:React.FC<any> = ({keyy}) =>{
 			<p>A Full stack Tasty Ice cream application</p>
 
 			<div className="stack-icons">
-				<img src="/public/assets/react-logo.svg" alt="" />
-				<img src="/public/assets/js-logo.svg" alt="" />
-				<img src="/public/assets/redux-logo.svg" alt="" />
-				<img src="/public/assets/nodejs-logo.svg" alt="" />
-				<img src="/public/assets/ts-logo.svg" alt="" />
-				<img src="/public/assets/tailwind-logo.svg" alt="" />
+				<img src="/assets/react-logo.svg" alt="" />
+				<img src="/assets/js-logo.svg" alt="" />
+				<img src="/assets/redux-logo.svg" alt="" />
+				<img src="/assets/nodejs-logo.svg" alt="" />
+				<img src="/assets/ts-logo.svg" alt="" />
+				<img src="/assets/tailwind-logo.svg" alt="" />
 			</div>
 
 			<div className="action-btns">
