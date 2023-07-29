@@ -81,7 +81,7 @@ const AboutPage:React.FC<any> = () =>{
 		 </section>
         
 		 </section>
-		 <img className="about-page-image" src="assets/about-page-image.jpeg" alt="" />
+		 <img className="about-page-image" src="/assets/about-page-image.jpeg" alt="" />
 	  </div>
 	)
 }

@@ -35,11 +35,11 @@ const WorkPageItemCard:React.FC<any> = ({keyy}) =>{
 			<div className="action-btns">
 				<div className="action-btn-tab">
 			    	<h3>Visit</h3>
-					<img src="/public/assets/arrow-right.svg" alt="" />
+					<img src="/assets/arrow-right.svg" alt="" />
 				</div>
 				<div className="action-btn-tab">
 			    	<h3>Repo</h3>
-					<img src="/public/assets/arrow-right.svg" alt="" />
+					<img src="/assets/arrow-right.svg" alt="" />
 				</div>
 				
 			</div>
