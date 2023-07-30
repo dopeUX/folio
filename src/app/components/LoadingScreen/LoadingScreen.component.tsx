@@ -71,7 +71,7 @@ const LoadingScreen: React.FC<any> = () => {
         //must be less than 1200
         loadingScreenRef.current.style.animation = "slideUp .6s forwards ease";
         bgImageRef.current.style.animation = "slideUpImage .6s forwards ease";
-        // wrapperImageRef.current.style.animation = "zoom-out .6s forwards ease";
+        wrapperImageRef.current.style.animation = "zoom-out .6s forwards ease";
       }, 300);
       // setTimeout(() => { //just now
       //   reduxActions.dismissLoadingScreen();
@@ -110,7 +110,7 @@ const LoadingScreen: React.FC<any> = () => {
         >
           Test
         </button> */}
-        <video
+        {/* <video
           ref={bgImageRef}
           className="vdeo"
           autoPlay
@@ -120,14 +120,14 @@ const LoadingScreen: React.FC<any> = () => {
           id="myVideo"
         >
           <source src="/assets/video4.mp4" type="video/mp4" />
-        </video>
-        {/* <img
+        </video> */}
+        <img
           // style={{display:'none'}}
-          // ref={bgImageRef}
+          ref={bgImageRef}
           className="loading-screen-bg-image"
-          src="/public/assets/bgimage.jpg"
+          src="/assets/bgimage.png"
           alt=""
-        /> */}
+        />
       </div>
     </div>
   );
