@@ -29,10 +29,10 @@ const WorkPage:React.FC<any> = () =>{
 	  };
 
 	useEffect(()=>{
-		window.addEventListener('scroll', handleScroll, { passive: true });
-		return () => {
-			window.removeEventListener('scroll', handleScroll);
-		};
+		// window.addEventListener('scroll', handleScroll, { passive: true });
+		// return () => {
+		// 	window.removeEventListener('scroll', handleScroll);
+		// };
 	},[]);  
 
 	useEffect(()=>{
@@ -46,9 +46,38 @@ const WorkPage:React.FC<any> = () =>{
 	return (
 		<div className="work-page">
           <h1 ref={demoRef} style={{color:colorPallete[colorPalleteIndex].colorHex}}>work.</h1>
-		  {workData.map((item, index:number)=>{
+		  {/* {workData.map((item, index:number)=>{
 			return <WorkPageItemCard keyy={index}/>
-		  })}
+		  })} */}
+		  <section className="detailed-work-section">
+		   <h3>My projects ?</h3>
+		    <div className="detailed-heads">
+		      <h2>Impressive.</h2>
+		      <h2>Astounding.</h2>
+		    </div>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+		    <p>Lets have a quick look at my projects</p>
+			<div className="detailed-work-sec-items">
+				<div className="work-item-card">
+					<h3 className="item-title">De</h3>
+					<div className="work-item-tile animate">
+						<h4>Explore github.</h4>
+					</div>
+				</div>
+				<div className="work-item-card">
+					<h3 className="item-title">Notes Pro</h3>
+					<div className="work-item-tile-image">
+						<img className="" src="assets/projectimg1.png" alt="" />
+					</div>
+				</div>
+				<div className="work-item-card">
+					<h3 className="item-title">Teerex</h3>
+					<div className="work-item-tile-image">
+						<img className="" src="assets/projectimg2.png" style={{border:'3px solid #D43636'}} alt="" />
+					</div>
+				</div>
+			</div>
+		  </section>
 		</div>
 	)
 }

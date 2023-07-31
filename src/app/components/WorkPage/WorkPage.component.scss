@@ -5,4 +5,108 @@
 	  margin: 0;
 	  padding: 0;
 	}
+
+	.detailed-work-section{
+		margin-left: 1rem;
+    	h3{
+    	  font-size: .9rem;
+	      color: #7c7c7c;	
+	   }
+
+	   .detailed-heads{
+		 display: flex;
+
+		 h2{
+		   margin: 0;	
+		   margin-right: .9rem;
+		 }
+	   }
+
+	   p{
+		width: 60%;
+		color: gray;
+		font-size: .8rem;
+	   }
+
+	   .detailed-work-sec-items{
+            margin-top: 30px;
+			display: flex;
+		.work-item-card{
+			width: fit-content;
+			position: relative;
+			padding-top: 55px;
+			margin-right: 2rem;
+			// background-color: green;
+			.item-title{
+				color: black;
+				position: absolute;
+				top: 0;
+				font-size: 2rem;
+				margin: 0;
+				left: .4rem;
+				bottom: 0;
+				height: fit-content;
+				// margin-top: 0;
+			}
+		  .work-item-tile{
+			//  position: unset;
+			 width: 170px;
+			 height: 154px;
+			 border-radius: 13px;
+			 display: flex;
+			 flex-direction: column;
+			 align-items: flex-end;
+			//  margin-top: 60px;
+			//  margin-bottom: 25px;
+			//  background-color: blue;
+
+			h4{
+			//   margin: 0;
+			  width: 100px;
+			  height: fit-content;
+			  color:white;
+			  margin-top:auto;	
+			  margin-bottom: 1rem;
+			  margin-left: 1rem;
+			  margin-right: auto;
+			  left: 0;
+			}
+			
+		  }	
+		  .work-item-tile-image{
+			img{
+			  width: 250px;
+			  height: 150px;
+			  border-radius: 20px;
+			  border:3px solid #4BA74B;
+			}
+		   }
+		}
+	   }
+  }
+}
+
+.animate {
+    background: linear-gradient(180deg, #13ef29, #476fff);
+    background-size: 400% 400%;
+
+    -webkit-animation: AnimationName 10s ease infinite;
+    -moz-animation: AnimationName 10s ease infinite;
+    animation: AnimationName 10s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:53% 0%}
+    50%{background-position:48% 100%}
+    100%{background-position:53% 0%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:53% 0%}
+    50%{background-position:48% 100%}
+    100%{background-position:53% 0%}
+}
+@keyframes AnimationName {
+    0%{background-position:53% 0%}
+    50%{background-position:48% 100%}
+    100%{background-position:53% 0%}
 }
