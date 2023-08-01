@@ -41,4 +41,12 @@ export default class ReduxStates {
 	isMusicPlayerVisible = useSelector((state: RootState)=>{
 		return state.appReducer.isMusicPlayerVisible;
 	})
+
+	isWorkItemOverlayTurnedOn = useSelector((state: RootState)=>{
+		return state.appReducer.isWorkItemOverlayTurnedOn
+	})
+
+	isWorkItemOverlay = useSelector((state: RootState)=>{
+		return state.appReducer.isWorkItemOverlay;
+	})
 }

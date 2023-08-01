@@ -8,6 +8,7 @@ import colorPallete from "../../data/colorPallete";
 import WorkPageItemCard from "./WorkPageItemCard/WorkPageItemCard";
 import workData from "../../data/projectsData";
 import ReduxActions from "../../actions/reduxActions";
+import WorkPageItemCardNew from "./WorkPageItemCardNew/WorkPageItemCardNew.component";
 
 const WorkPage:React.FC<any> = () =>{
 	const dispatch = useDispatch();
@@ -64,18 +65,11 @@ const WorkPage:React.FC<any> = () =>{
 						<h4>Explore github.</h4>
 					</div>
 				</div>
-				<div className="work-item-card">
-					<h3 className="item-title">Notes Pro</h3>
-					<div className="work-item-tile-image">
-						<img className="" src="assets/projectimg1.png" alt="" />
-					</div>
-				</div>
-				<div className="work-item-card">
-					<h3 className="item-title">Teerex</h3>
-					<div className="work-item-tile-image">
-						<img className="" src="assets/projectimg2.png" style={{border:'3px solid #D43636'}} alt="" />
-					</div>
-				</div>
+
+				{/* //cards ---- */}
+				
+				<WorkPageItemCardNew title='Notes Pro' image='assets/projectimg1.png'/>
+				<WorkPageItemCardNew title='TeeRex' image='assets/projectimg2.png'/>
 			</div>
 		  </section>
 		</div>

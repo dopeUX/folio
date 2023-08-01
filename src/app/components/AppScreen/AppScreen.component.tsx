@@ -17,10 +17,12 @@ import {
 import Hamburger from "../../common/Hamburger/Hamburger";
 import ReduxActions from "../../actions/reduxActions";
 import ReduxStates from "../../actions/reduxStates";
+import WorkPageItemOverlay from "../WorkPage/WorkPageItemOverlay/WorkPageItemOverlay.component";
 
 const AppScreen: React.FC<any> = () => {
   const reduxStates = new ReduxStates();
   const isNavScreenOn = reduxStates.isNavScreenOn;
+  const isWorkItemOverlay = reduxStates.isWorkItemOverlay;
   const isLoading = reduxStates.isLoading;
   const isLoadingMusic = reduxStates.isLoadingMusic;
   const [isAppInitiallyRendered, setIsAppInitiallyRendered] = useState(true);
@@ -109,6 +111,7 @@ const AppScreen: React.FC<any> = () => {
       {reduxStates.isMusicPlayerVisible && musicApp()}
       {/* <audio style={{display:'none'}} id="backgroundMusic" ref={audioRef} autoPlay={true} src="/public/assets/paranoid.mp3" controls muted={false}></audio> */}
       {isNavScreenOn && <Navigation isNavScreenOn={isNavScreenOn} />}
+      {isWorkItemOverlay && <WorkPageItemOverlay/>}
       {!isAppInitiallyRendered && <Screen />}
     </div>
   );

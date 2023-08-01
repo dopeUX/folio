@@ -1,7 +1,7 @@
 /* eslint-disable no-mixed-spaces-and-tabs */
 /* eslint-disable @typescript-eslint/no-empty-function */
 import { useDispatch } from "react-redux";
-import { updateColorPalleteIndex,updateIsMusicPlayerVisible, updateIsLoading, updateNavScreenState, updateScreenZoomState } from "../store/AppSlice";
+import { updateColorPalleteIndex,updateIsMusicPlayerVisible, updateIsLoading, updateNavScreenState, updateScreenZoomState, updateIsWorkItemOverlay, updateIsWorkItemOverlayTurnedOn } from "../store/AppSlice";
 import { updateIsLoadingScreenTurnedOn } from "../store/AppSlice";
 import { useNavigate } from "react-router-dom";
 
@@ -55,6 +55,22 @@ export default class ReduxActions {
 
     updateIsMusicPlayer(e:boolean) :void{
 		this.dispatch(updateIsMusicPlayerVisible(e))
+	}
+
+	updateIsWorkItemOverlayState(e:boolean): void{
+	  if(e){
+		this.dispatch(updateIsWorkItemOverlay(true));
+		// this.dispatch(updateIsWorkItemOverlayTurnedOn(true));
+
+		setTimeout(()=>{
+         this.dispatch(updateIsWorkItemOverlayTurnedOn(true));
+		},100)
+	  }else{
+		this.dispatch(updateIsWorkItemOverlayTurnedOn(false));
+		setTimeout(() => {
+		  this.dispatch(updateIsWorkItemOverlay(false));	
+		}, 1000);
+	  }
 	}
 
 	

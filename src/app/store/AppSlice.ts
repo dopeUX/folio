@@ -15,7 +15,9 @@ const initialState = {
 	isAppInitiallyRendered:true,
 	isLoadingMusic:false,
 	loadingMusicIndex:0,
-	isMusicPlayerVisible:false
+	isMusicPlayerVisible:false,
+	isWorkItemOverlayTurnedOn:false,
+	isWorkItemOverlay:false
 }
 
 const AppSlice = createSlice({
@@ -63,6 +65,12 @@ const AppSlice = createSlice({
 	  },
 	  updateIsMusicPlayerVisible:(state, action)=>{
 		 state.isMusicPlayerVisible = action.payload;
+	  },
+	  updateIsWorkItemOverlayTurnedOn:(state, action)=>{
+		 state.isWorkItemOverlayTurnedOn = action.payload;
+	  },
+	  updateIsWorkItemOverlay:(state, action)=>{
+		 state.isWorkItemOverlay = action.payload;
 	  }
 	}
 })
@@ -74,6 +82,8 @@ export const {
 	updateIsLoading, 
 	updateIsLoadingScreenTurnedOn, 
 	updateLoadingMusicState,
-    updateIsMusicPlayerVisible
+    updateIsMusicPlayerVisible,
+	updateIsWorkItemOverlay,
+	updateIsWorkItemOverlayTurnedOn
 } = AppSlice.actions;
 export default AppSlice.reducer;

@@ -10,6 +10,54 @@
   font-size: 0.9rem;
   color: #7c7c7c;
 }
+.work-page .detailed-work-section .work-item-card {
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  padding-top: 55px;
+  margin-right: 2rem;
+  cursor: pointer;
+}
+.work-page .detailed-work-section .work-item-card .item-title {
+  font-size: 0.9rem;
+  color: #7c7c7c;
+}
+.work-page .detailed-work-section .work-item-card .item-title {
+  color: black;
+  position: absolute;
+  top: 0;
+  font-size: 2rem;
+  margin: 0;
+  left: 0.4rem;
+  bottom: 0;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.work-page .detailed-work-section .work-item-card .work-item-tile {
+  width: 170px;
+  height: 154px;
+  border-radius: 13px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.work-page .detailed-work-section .work-item-card .work-item-tile h4 {
+  width: 100px;
+  height: -moz-fit-content;
+  height: fit-content;
+  color: white;
+  margin-top: auto;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  margin-right: auto;
+  left: 0;
+}
+.work-page .detailed-work-section .work-item-card .work-item-tile-image img {
+  width: 250px;
+  height: 150px;
+  border-radius: 20px;
+  border: 3px solid #4BA74B;
+}
 .work-page .detailed-work-section .detailed-heads {
   display: flex;
 }
@@ -25,49 +73,6 @@
 .work-page .detailed-work-section .detailed-work-sec-items {
   margin-top: 30px;
   display: flex;
-}
-.work-page .detailed-work-section .detailed-work-sec-items .work-item-card {
-  width: -moz-fit-content;
-  width: fit-content;
-  position: relative;
-  padding-top: 55px;
-  margin-right: 2rem;
-}
-.work-page .detailed-work-section .detailed-work-sec-items .work-item-card .item-title {
-  color: black;
-  position: absolute;
-  top: 0;
-  font-size: 2rem;
-  margin: 0;
-  left: 0.4rem;
-  bottom: 0;
-  height: -moz-fit-content;
-  height: fit-content;
-}
-.work-page .detailed-work-section .detailed-work-sec-items .work-item-card .work-item-tile {
-  width: 170px;
-  height: 154px;
-  border-radius: 13px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-.work-page .detailed-work-section .detailed-work-sec-items .work-item-card .work-item-tile h4 {
-  width: 100px;
-  height: -moz-fit-content;
-  height: fit-content;
-  color: white;
-  margin-top: auto;
-  margin-bottom: 1rem;
-  margin-left: 1rem;
-  margin-right: auto;
-  left: 0;
-}
-.work-page .detailed-work-section .detailed-work-sec-items .work-item-card .work-item-tile-image img {
-  width: 250px;
-  height: 150px;
-  border-radius: 20px;
-  border: 3px solid #4BA74B;
 }
 
 .animate {
