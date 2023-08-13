@@ -58,7 +58,7 @@ export default class ReduxActions {
 		},400);
 		
 		setTimeout(()=>{
-			// this.navigate(route)
+			this.navigate(route)
 		},1300) 
 	}
 

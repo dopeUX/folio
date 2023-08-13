@@ -67,8 +67,17 @@ const Screen: React.FC<any> = () => {
     if(heroSectionState?.screenZoom == 'scale(0.9)'){
       heroSectionRef.current.style.transform = heroSectionState?.screenZoom;
       setTimeout(()=>{
-       heroSectionRef.current.style.opacity = 0;
-      },200)
+        heroSectionRef.current.style.opacity = 0;
+      },300)
+
+      setTimeout(()=>{
+        heroSectionRef.current.style.transform = 'scale(1.1)';
+      },1000)
+
+      setTimeout(()=>{
+        heroSectionRef.current.style.transform = 'scale(1.0)';
+        heroSectionRef.current.style.opacity = 1;
+      }, 1500)
     }
   },[heroSectionState])
   return (
