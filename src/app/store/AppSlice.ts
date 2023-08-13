@@ -7,6 +7,7 @@ const initialState = {
 	showNavScreen:false,
 	isNavScreenTurnedOn:false,
 	screenZoomState:'',
+	heroSectionState:{},
 	isAccentColor:false,
 	accentColor:'#32a852',
 	colorPalleteIndex:0,
@@ -76,6 +77,9 @@ const AppSlice = createSlice({
 	  },
 	  updateCurrentWorkItemIndex:(state, action)=>{
 		state.currentWorkItemIndex = action.payload;
+	  },
+	  updateHeroSectionState:(state, action)=>{
+		state.heroSectionState = action.payload
 	  }
 	}
 })
@@ -90,6 +94,7 @@ export const {
     updateIsMusicPlayerVisible,
 	updateIsWorkItemOverlay,
 	updateIsWorkItemOverlayTurnedOn,
-	updateCurrentWorkItemIndex
+	updateCurrentWorkItemIndex,
+	updateHeroSectionState
 } = AppSlice.actions;
 export default AppSlice.reducer;

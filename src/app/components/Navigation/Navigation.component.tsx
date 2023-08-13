@@ -110,7 +110,11 @@ const Navigation: React.FC<any> = ({ isNavScreenOn }) => {
             setCurrentNavIndex(e)
           }} onItemClick={()=>{
             navScreenRef.current.style.opacity = 0;
-            reduxActions.dismissNavigationScreen();
+            setTimeout(() => {
+              
+              // reduxActions.dismissNavigationScreen();
+            }, 1000);
+            
           }}/>
         </div>
         <section className="bottom-links">

@@ -10,7 +10,7 @@ import Screen from './components/Screen/Screen.component';
 import AppScreen from './components/AppScreen/AppScreen.component';
 
 function App() {
-  const AppScreens = React.lazy(()=>import('./components/AppScreen/AppScreen.component'))
+  // const AppScreens = React.lazy(()=>import('./components/AppScreen/AppScreen.component'))
   const counter = useSelector((state:RootState)=>{
     return state.appReducer.showNavScreen
   })
@@ -27,11 +27,9 @@ function App() {
   return (
     <>
      {/* <Suspense fallback={<div>Loading</div>}> */}
-     {
-      !loading ? <AppScreen/> : <div>loading...</div>
-     }
+     <AppScreen/>
      {/* </Suspense> */}
-     <img src="/assets/work-nav.svg" style={{display:'none'}} onLoad={()=>{
+     {/* <img src="/assets/work-nav.svg" style={{display:'none'}} onLoad={()=>{
        setCount(x=>x+1)
      }} alt="" />
      <img src="/assets/me-nav.svg" style={{display:'none'}} onLoad={()=>{
@@ -39,7 +37,7 @@ function App() {
      }} alt="" />
      <img src="/assets/reach-nav.svg" style={{display:'none'}} onLoad={()=>{
       setCount(x=>x+1)
-     }}  alt="" />
+     }}  alt="" /> */}
     </>
   )
 }

@@ -1,7 +1,7 @@
 /* eslint-disable no-mixed-spaces-and-tabs */
 /* eslint-disable @typescript-eslint/no-empty-function */
 import { useDispatch } from "react-redux";
-import { updateColorPalleteIndex,updateIsMusicPlayerVisible, updateIsLoading, updateNavScreenState, updateScreenZoomState, updateIsWorkItemOverlay, updateIsWorkItemOverlayTurnedOn, updateCurrentWorkItemIndex } from "../store/AppSlice";
+import { updateColorPalleteIndex,updateIsMusicPlayerVisible, updateIsLoading, updateNavScreenState, updateScreenZoomState, updateIsWorkItemOverlay, updateIsWorkItemOverlayTurnedOn, updateCurrentWorkItemIndex, updateHeroSectionState } from "../store/AppSlice";
 import { updateIsLoadingScreenTurnedOn } from "../store/AppSlice";
 import { useNavigate } from "react-router-dom";
 
@@ -36,17 +36,27 @@ export default class ReduxActions {
       }, 600);
 	}
 
+	updateHeroSection(): void{
+	  this.dispatch(updateHeroSectionState({
+		screenZoom:'scale(0.9)'
+	  }))	
+	}
+
 	changeRoute(route:any): void {
 		// this.dispatch(updateIsLoading(true));
               // dispatch(updateLoadingMusicState(true));
         // this.dispatch(updateIsLoadingScreenTurnedOn(true));
-        // this.dispatch(updateScreenZoomState("scale(1)"));
+        this.dispatch(updateScreenZoomState("scale(1)"));
 		// this.dismissNavigationScreen();
+        setTimeout(()=>{
+          this.updateHeroSection()   
+		}, 200)
+		//new update ----
+		// this.dispatch(updateNavScreenState(0.1));
+		setTimeout(()=>{
+            this.dispatch(updateNavScreenState(false))
+		},400);
 		
-		setTimeout(() => {
-			this.navigate(route)
-        //   this.dispatch(updateNavScreenState(false));
-        }, 600);
 		setTimeout(()=>{
 			// this.navigate(route)
 		},1300) 

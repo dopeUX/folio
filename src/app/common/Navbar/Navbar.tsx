@@ -51,7 +51,7 @@ const Navbar: React.FC<NavbarProps> = ({ navItems, onItemHover, onItemClick }) =
             <a className={`nav-item-a ${currentItemActive===index ? 'gradient-anim' : ""}`} href="" onClick={(e)=>{
               e.preventDefault();
               onItemClick();
-              reduxActions.changeRoute(navItems[index].route);
+               reduxActions.changeRoute(navItems[index].route);
              }}>
               {item.title}
             </a>

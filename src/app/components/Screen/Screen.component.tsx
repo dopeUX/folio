@@ -22,6 +22,8 @@ const Screen: React.FC<any> = () => {
   const reduxStates = new ReduxStates();
   const isShowNavScreen = reduxStates.isShowNavScreen;
   const screenZoomState = reduxStates.screenZoomState;
+  const heroSectionState:any = reduxStates.heroSectionState;
+  const heroSectionRef:any = useRef();
   const screenRef: any = useRef();
   const dispatch = useDispatch();
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -58,13 +60,23 @@ const Screen: React.FC<any> = () => {
   },[]);
   useEffect(() => {
     screenRef.current.style.transform = screenZoomState;
+    // screenRef.current.style.opacity = 1;
   }, [screenZoomState]);
+
+  useEffect(()=>{
+    if(heroSectionState?.screenZoom == 'scale(0.9)'){
+      heroSectionRef.current.style.transform = heroSectionState?.screenZoom;
+      setTimeout(()=>{
+       heroSectionRef.current.style.opacity = 0;
+      },200)
+    }
+  },[heroSectionState])
   return (
   //  <div className="screen-wrapper">
     <div ref={screenRef} className="screen" style={{zIndex:12}}>
       <Header logoTitle="Dé" headerBgOn={isHeaderBg}/>
       {/* ///All Routes -------------- */}
-      <section className="hero-section">
+      <section ref={heroSectionRef} className="hero-section">
         <Routes>
          <Route path="/" Component={Homepage}/>
          <Route path="/work" Component={WorkPage}/>

@@ -34,6 +34,10 @@ export default class ReduxStates {
 		return state.appReducer.showNavScreen;
 	});
 
+	heroSectionState = useSelector((state:RootState)=>{
+		return state.appReducer.heroSectionState;
+	})
+
 	screenZoomState = useSelector((state: RootState) => {
 		return state.appReducer.screenZoomState;
 	});

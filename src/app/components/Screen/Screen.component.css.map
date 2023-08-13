@@ -1,1 +1,1 @@
-{"version":3,"sources":["Screen.component.scss","Screen.component.css"],"names":[],"mappings":"AACA;EACC,UAAA;EACA,aAAA;EACA,YAAA;EAEG,kBAAA;EACH,0BAAA;EACA,qBAAA;EACA,mBAAA;EACA,uBAAA;ACDD;ADSC;EAGC,WAAA;EACA,YAAA;EACA,kBAAA;EACA,gBAAA;ACTF","file":"Screen.component.css"}
+{"version":3,"sources":["Screen.component.scss","Screen.component.css"],"names":[],"mappings":"AACA;EACC,UAAA;EACA,aAAA;EACA,YAAA;EAEG,kBAAA;EACH,yBAAA;EACA,qBAAA;EACA,mBAAA;EACA,uBAAA;ACDD;ADSC;EAGC,WAAA;EACA,YAAA;EACA,kBAAA;EACA,gBAAA;EACA,yBAAA;ACTF","file":"Screen.component.css"}

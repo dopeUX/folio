@@ -3,7 +3,7 @@
   height: 100vh;
   margin: auto;
   position: relative;
-  transition: transform 0.5s;
+  transition: all 0.5s ease;
   transform: scale(0.8);
   align-items: center;
   justify-content: center;
@@ -13,4 +13,5 @@
   margin: auto;
   padding-left: 2rem;
   margin-top: 0rem;
+  transition: all 0.5s ease;
 }/*# sourceMappingURL=Screen.component.css.map */
