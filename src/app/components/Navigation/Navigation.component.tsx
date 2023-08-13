@@ -44,6 +44,7 @@ const Navigation: React.FC<any> = ({ isNavScreenOn }) => {
       setClickedOutside(true);
     }
   };
+  
 
   const handleClickInside = () => setClickedOutside(false);
 
@@ -79,6 +80,10 @@ const Navigation: React.FC<any> = ({ isNavScreenOn }) => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  useEffect(()=>{
+
+  },[])
+
   return (
     <div ref={navScreenRef} className="navigation-screen">
       <div className="nav-image-wrapper">
@@ -103,6 +108,9 @@ const Navigation: React.FC<any> = ({ isNavScreenOn }) => {
           <Navbar navItems={navItems} onItemHover={(e:number)=>{
             console.log(showImage,"Navbar")
             setCurrentNavIndex(e)
+          }} onItemClick={()=>{
+            navScreenRef.current.style.opacity = 0;
+            reduxActions.dismissNavigationScreen();
           }}/>
         </div>
         <section className="bottom-links">

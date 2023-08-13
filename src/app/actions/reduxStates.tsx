@@ -49,4 +49,8 @@ export default class ReduxStates {
 	isWorkItemOverlay = useSelector((state: RootState)=>{
 		return state.appReducer.isWorkItemOverlay;
 	})
+
+	currentWorkItemIndex = useSelector((state: RootState)=>{
+		return state.appReducer.currentWorkItemIndex;
+	})
 }

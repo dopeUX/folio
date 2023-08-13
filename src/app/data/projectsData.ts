@@ -1,22 +1,45 @@
 /* eslint-disable no-mixed-spaces-and-tabs */
-const workData = [
+export interface workProps {
+	id:number;
+	projectName:string;
+	projectDesc:string;
+	assets:string[];
+	techStack:Array<any>;
+	githubUrl:string;
+	liveUrl:string;
+}
+const workData:workProps[] = [
   {
-	projectName:'ScoopsNSmiles',
+	id:1,
+	projectName:'Notes Pro',
 	projectDesc:'',
 	assets:[
-	 'scoopsnsmiles1.png','scoopsnsmiles2.png','scoopsnsmiles3.png'	
+	 'projectimg1.png','projectimg1.png','projectimg1.png'	
 	],
-	teckStack:[],
+	techStack:[],
 	githubUrl:'',
 	liveUrl:''
   },
   {
-	projectName:'ScoopsNSmiles',
+	id:2,
+	projectName:'Notes Pro',
 	projectDesc:'',
 	assets:[
-	 'scoopsnsmiles1.png','scoopsnsmiles2.png','scoopsnsmiles3.png'	
+	 'projectimg1.png','projectimg1.png'	
 	],
-	teckStack:[],
+	techStack:[],
+	githubUrl:'',
+	liveUrl:''
+  },
+  {
+	id:3,
+	projectName:'Teerex',
+	projectDesc:'',
+	assets:[
+	 'projectimg2.png',
+	 'projectimg2.png'
+	],
+	techStack:[],
 	githubUrl:'',
 	liveUrl:''
   }

@@ -12,8 +12,9 @@ import ReduxStates from "../../actions/reduxStates";
 interface NavbarProps {
   navItems: Array<any>;
   onItemHover: any;
+  onItemClick:any;
 }
-const Navbar: React.FC<NavbarProps> = ({ navItems, onItemHover }) => {
+const Navbar: React.FC<NavbarProps> = ({ navItems, onItemHover, onItemClick }) => {
   const reduxActions = new ReduxActions();
   const reduxStates = new ReduxStates();
   const isAccentColor = reduxStates.accentColor;
@@ -49,6 +50,7 @@ const Navbar: React.FC<NavbarProps> = ({ navItems, onItemHover }) => {
            }}>
             <a className={`nav-item-a ${currentItemActive===index ? 'gradient-anim' : ""}`} href="" onClick={(e)=>{
               e.preventDefault();
+              onItemClick();
               reduxActions.changeRoute(navItems[index].route);
              }}>
               {item.title}

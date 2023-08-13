@@ -1,13 +1,18 @@
 .work-page{
-
+    position: relative;
 	h1{
 	  font-size: 8rem;	
 	  margin: 0;
 	  padding: 0;
 	}
-
+    .side-image{
+	  width: 25rem;	
+	  right: -9rem;
+	  position: absolute;	
+	}
 	.detailed-work-section{
 		margin-left: 1rem;
+		overflow-x: hidden;
 		h3{
 		   font-size: .9rem;
 		   color: #7c7c7c;	
@@ -86,9 +91,26 @@
 	   }
 
 	   .detailed-work-sec-items{
+		    width:87%;
             margin-top: 30px;
+			margin-right: 20rem;
 			display: flex;
-		
+			padding-right: 2rem;
+			// position: relative;
+		    overflow-x: scroll;
+
+			.white-grad-overlay{
+              position: fixed;
+			  height: 100%;
+			  width:5rem;
+			  right: 0;
+			  padding-right: 3rem;
+			  margin-right: 0;
+			  z-index: 99;
+			//   background: blue;
+			  background: linear-gradient(270deg, #EEE 0%, rgba(238, 238, 238, 0.98) 22.92%, rgba(238, 238, 238, 0.83) 46.88%, rgba(238, 238, 238, 0.71) 70.31%, rgba(238, 238, 238, 0.00) 100%);
+			//   background: linear-gradient(270deg, #EEE 0%, #EEE 26.04%, rgba(238, 238, 238, 0.10) 62.50%, rgba(238, 238, 238, 0.10) 100%);
+			}
 	   }
   }
 }

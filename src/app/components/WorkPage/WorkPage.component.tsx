@@ -6,7 +6,7 @@ import { updateIsLoadingScreenTurnedOn } from "../../store/AppSlice";
 import './WorkPage.component.css';
 import colorPallete from "../../data/colorPallete";
 import WorkPageItemCard from "./WorkPageItemCard/WorkPageItemCard";
-import workData from "../../data/projectsData";
+import workData, { workProps } from "../../data/projectsData";
 import ReduxActions from "../../actions/reduxActions";
 import WorkPageItemCardNew from "./WorkPageItemCardNew/WorkPageItemCardNew.component";
 
@@ -50,6 +50,7 @@ const WorkPage:React.FC<any> = () =>{
 		  {/* {workData.map((item, index:number)=>{
 			return <WorkPageItemCard keyy={index}/>
 		  })} */}
+		  {/* <img className="side-image" src="assets/work-nav.svg" alt="" /> */}
 		  <section className="detailed-work-section">
 		   <h3>My projects ?</h3>
 		    <div className="detailed-heads">
@@ -59,6 +60,10 @@ const WorkPage:React.FC<any> = () =>{
 			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
 		    <p>Lets have a quick look at my projects</p>
 			<div className="detailed-work-sec-items">
+			<div className="white-grad-overlay"></div>
+			<div className="white-grad-overlay"></div>
+			<div className="white-grad-overlay"></div>
+			<div className="white-grad-overlay"></div>
 				<div className="work-item-card">
 					<h3 className="item-title">De</h3>
 					<div className="work-item-tile animate">
@@ -67,9 +72,13 @@ const WorkPage:React.FC<any> = () =>{
 				</div>
 
 				{/* //cards ---- */}
-				
-				<WorkPageItemCardNew title='Notes Pro' image='assets/projectimg1.png'/>
+				{workData.map((item:workProps, index:number)=>{
+					return <WorkPageItemCardNew title={item.projectName} image={`assets/`+item.assets[0]} index={index}/>
+				})}
+				{/* <WorkPageItemCardNew title='Notes Pro' image='assets/projectimg1.png'/>
 				<WorkPageItemCardNew title='TeeRex' image='assets/projectimg2.png'/>
+				<WorkPageItemCardNew title='TeeRex' image='assets/projectimg2.png'/>
+				<WorkPageItemCardNew title='TeeRex' image='assets/projectimg2.png'/> */}
 			</div>
 		  </section>
 		</div>

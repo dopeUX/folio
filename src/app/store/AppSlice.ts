@@ -5,6 +5,7 @@ import loadingMusic from "../data/loadingMusic";
 
 const initialState = {
 	showNavScreen:false,
+	isNavScreenTurnedOn:false,
 	screenZoomState:'',
 	isAccentColor:false,
 	accentColor:'#32a852',
@@ -17,7 +18,8 @@ const initialState = {
 	loadingMusicIndex:0,
 	isMusicPlayerVisible:false,
 	isWorkItemOverlayTurnedOn:false,
-	isWorkItemOverlay:false
+	isWorkItemOverlay:false,
+	currentWorkItemIndex:0
 }
 
 const AppSlice = createSlice({
@@ -71,6 +73,9 @@ const AppSlice = createSlice({
 	  },
 	  updateIsWorkItemOverlay:(state, action)=>{
 		 state.isWorkItemOverlay = action.payload;
+	  },
+	  updateCurrentWorkItemIndex:(state, action)=>{
+		state.currentWorkItemIndex = action.payload;
 	  }
 	}
 })
@@ -84,6 +89,7 @@ export const {
 	updateLoadingMusicState,
     updateIsMusicPlayerVisible,
 	updateIsWorkItemOverlay,
-	updateIsWorkItemOverlayTurnedOn
+	updateIsWorkItemOverlayTurnedOn,
+	updateCurrentWorkItemIndex
 } = AppSlice.actions;
 export default AppSlice.reducer;

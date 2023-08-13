@@ -95,7 +95,7 @@ const LoadingScreen: React.FC<any> = () => {
       }}
     >
       <div className="loading-screen-wrapper">
-        <p ref={quoteRef}>"Bichess lie, compilers don't!"</p>
+        <p ref={quoteRef}>"Only by exhibiting actions in harmony with the sound words which he has received will anyone be helped by philosophy."</p>
       </div>
       <div ref={wrapperImageRef} className="loading-screen-image-wrapper">
         {/* <button

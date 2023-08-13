@@ -1,7 +1,7 @@
 /* eslint-disable no-mixed-spaces-and-tabs */
 /* eslint-disable @typescript-eslint/no-empty-function */
 import { useDispatch } from "react-redux";
-import { updateColorPalleteIndex,updateIsMusicPlayerVisible, updateIsLoading, updateNavScreenState, updateScreenZoomState, updateIsWorkItemOverlay, updateIsWorkItemOverlayTurnedOn } from "../store/AppSlice";
+import { updateColorPalleteIndex,updateIsMusicPlayerVisible, updateIsLoading, updateNavScreenState, updateScreenZoomState, updateIsWorkItemOverlay, updateIsWorkItemOverlayTurnedOn, updateCurrentWorkItemIndex } from "../store/AppSlice";
 import { updateIsLoadingScreenTurnedOn } from "../store/AppSlice";
 import { useNavigate } from "react-router-dom";
 
@@ -37,15 +37,18 @@ export default class ReduxActions {
 	}
 
 	changeRoute(route:any): void {
-		this.dispatch(updateIsLoading(true));
+		// this.dispatch(updateIsLoading(true));
               // dispatch(updateLoadingMusicState(true));
-        this.dispatch(updateIsLoadingScreenTurnedOn(true));
-        this.dispatch(updateScreenZoomState("scale(1)"));
-        setTimeout(() => {
-          this.dispatch(updateNavScreenState(false));
+        // this.dispatch(updateIsLoadingScreenTurnedOn(true));
+        // this.dispatch(updateScreenZoomState("scale(1)"));
+		// this.dismissNavigationScreen();
+		
+		setTimeout(() => {
+			this.navigate(route)
+        //   this.dispatch(updateNavScreenState(false));
         }, 600);
 		setTimeout(()=>{
-			this.navigate(route)
+			// this.navigate(route)
 		},1300) 
 	}
 
@@ -71,6 +74,10 @@ export default class ReduxActions {
 		  this.dispatch(updateIsWorkItemOverlay(false));	
 		}, 1000);
 	  }
+	}
+
+	updateCurrentWorkItemIndex(index:number): void{
+		this.dispatch(updateCurrentWorkItemIndex(index));
 	}
 
 	
