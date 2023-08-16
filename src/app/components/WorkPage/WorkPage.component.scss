@@ -12,7 +12,10 @@
 	}
 	.detailed-work-section{
 		margin-left: 1rem;
-		overflow-x: hidden;
+		overflow: hidden;
+	    opacity: 0;
+		transition: all .5s ease-in-out;
+		transform: translateY(50px);
 		h3{
 		   font-size: .9rem;
 		   color: #7c7c7c;	

@@ -20,6 +20,7 @@ const WorkPage:React.FC<any> = () =>{
 	});
 	const reduxActions = new ReduxActions();
 	const demoRef:any = useRef();
+	const detailedSectionRef:any = useRef();
 	
 	const handleScroll = () => {
 		const position = window.pageYOffset;
@@ -37,6 +38,17 @@ const WorkPage:React.FC<any> = () =>{
 	},[]);  
 
 	useEffect(()=>{
+		setTimeout(()=>{
+		  detailedSectionRef.current.style.opacity = 1;
+		  detailedSectionRef.current.style.transform = 'translateY(10px) scale(1.0)';
+		},600)
+
+		setTimeout(()=>{
+		//   detailedSectionRef.current.style.transform = 'translateY(20px)'
+		},1200)
+	},[])
+
+	useEffect(()=>{
       if(isLoadingScreenTurnedOn){
 		setTimeout(()=>{
 			//min 1300 sec
@@ -51,7 +63,7 @@ const WorkPage:React.FC<any> = () =>{
 			return <WorkPageItemCard keyy={index}/>
 		  })} */}
 		  {/* <img className="side-image" src="assets/work-nav.svg" alt="" /> */}
-		  <section className="detailed-work-section">
+		  <section ref={detailedSectionRef} className="detailed-work-section">
 		   <h3>My projects ?</h3>
 		    <div className="detailed-heads">
 		      <h2>Impressive.</h2>
