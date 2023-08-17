@@ -113,6 +113,7 @@ const AppScreen: React.FC<any> = () => {
       {isNavScreenOn && <Navigation isNavScreenOn={isNavScreenOn} />}
       {isWorkItemOverlay && <WorkPageItemOverlay/>}
       {!isAppInitiallyRendered && <Screen />}
+      {/* <Footer/> */}
     </div>
   );
 };

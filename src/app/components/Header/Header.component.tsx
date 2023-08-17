@@ -78,7 +78,7 @@ const Header: React.FC<any> = ({ logoTitle, headerBgOn=true, currentPage = 'work
         <img
           onClick={() => {
             console.log(colorPalleteIndex);
-            reduxActions.updateColorPalleteIndex();
+            // reduxActions.updateColorPalleteIndex();
           }}
           ref={profileImageRef}
           className="header-image"

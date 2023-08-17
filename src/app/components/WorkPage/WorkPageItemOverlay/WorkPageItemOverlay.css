@@ -41,6 +41,24 @@
   transition: clip-path 1s ease;
   transition: clip-path 1s ease, -webkit-clip-path 1s ease;
 }
+.work-page-item-overlay .content .images-section-first img {
+  width: 430px;
+  height: 250px;
+  border-radius: 20px;
+  transform: scale(1);
+  border: 3px solid #4BA74B;
+}
+.work-page-item-overlay .content .images-section-first .zoom-out {
+  animation: scale-img12 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s forwards;
+}
+@keyframes scale-img12 {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.8);
+  }
+}
 .work-page-item-overlay .content .images-section-second img {
   width: 350px;
   height: 200px;

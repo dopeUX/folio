@@ -42,10 +42,13 @@ export default class ReduxActions {
 	  }))	
 	}
 
-	changeRoute(route:any): void {
-		// this.dispatch(updateIsLoading(true));
+	changeRoute(route:any, turnOnLoading:boolean=false): void {
+		if(turnOnLoading){
+          this.dispatch(updateIsLoading(true));
+		  this.dispatch(updateIsLoadingScreenTurnedOn(true));
+		}
+		
               // dispatch(updateLoadingMusicState(true));
-        // this.dispatch(updateIsLoadingScreenTurnedOn(true));
         this.dispatch(updateScreenZoomState("scale(1)"));
 		// this.dismissNavigationScreen();
         setTimeout(()=>{

@@ -92,7 +92,7 @@ const Navigation: React.FC<any> = ({ isNavScreenOn }) => {
       <div
         className="nav-screen-wrapper">
         <h3 onClick={()=>{
-          reduxActions.changeRoute('/');
+          reduxActions.changeRoute('/', true);
         }}>De</h3>
         <div
           className="nav-items"
