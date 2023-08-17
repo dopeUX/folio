@@ -82,7 +82,7 @@ const Header: React.FC<any> = ({ logoTitle, headerBgOn=true, currentPage = 'work
           }}
           ref={profileImageRef}
           className="header-image"
-          src="/assets/header-image.jpg"
+          src="/assets/profile-pic.jpg"
           alt=""
         />
       </a>
