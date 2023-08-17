@@ -35,7 +35,7 @@ const Homepage: React.FC<any> = () => {
          reduxActions.dismissLoadingScreen();
       },5000)
       }
-  },[])
+  },[reduxStates.isLoadingScreenTurnedOn])
   useEffect(()=>{
     // audioRef.current.play()
   })
