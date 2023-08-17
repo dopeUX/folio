@@ -63,7 +63,7 @@ const Header: React.FC<any> = ({ logoTitle, headerBgOn=true, currentPage = 'work
     <header ref={headerRef} className={`${headerBgOn && 'setHeaderBg'}`}>
       <section className="left-col">
        <h1 ref={logoRef} onClick={()=>{
-        reduxActions.updateIsMusicPlayer(true);
+        // reduxActions.updateIsMusicPlayer(true);
        }}>{logoTitle}</h1>
        {
          isHeaderBg && <h4 ref={titlePageRef}>{currentPage}</h4>
