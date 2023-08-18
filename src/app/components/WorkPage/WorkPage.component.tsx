@@ -66,12 +66,12 @@ const WorkPage:React.FC<any> = () =>{
 		  <section ref={detailedSectionRef} className="detailed-work-section">
 		   <h3>My projects ?</h3>
 		    <div className="detailed-heads">
-		      <h2>Impressive.</h2>
-		      <h2>Astounding.</h2>
+		      <h2>Sleek.</h2>
+		      <h2>Chic.</h2>
 		    </div>
-			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-		    <p>Lets have a quick look at my projects</p>
-			<div className="detailed-work-sec-items">
+			<p>"Welcome to my digital playground where I spin MERN magic into web wonders! From whipping up e-commerce enchantments that make shopping a breeze, to summoning social platforms where connections flourish, and crafting data dashboards that turn numbers into a symphony, I'm the web sorcerer you've been waiting for. Join me on a spellbinding journey through pixels and code, where every project is a potion of creativity and tech trickery!"</p>
+		    <p className="other-p">Lets have a quick look at my projects</p>
+			<div className="detailed-work-sec-items scroll">
 			<div className="white-grad-overlay"></div>
 			<div className="white-grad-overlay"></div>
 			<div className="white-grad-overlay"></div>
