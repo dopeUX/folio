@@ -68,7 +68,7 @@ const Screen: React.FC<any> = () => {
     let len = navItems.length;
     navItems.forEach((item)=>{
       const preloadImage = new Image();
-      preloadImage.src = `/assets${item.navImage}.svg`;
+      preloadImage.src = `/assets${item.navImage}.png`;
       preloadImage.onload = () => {
         // Image preloaded
         console.log(i, 'weeeeeeee')
