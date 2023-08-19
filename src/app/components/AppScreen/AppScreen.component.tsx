@@ -73,6 +73,17 @@ const AppScreen: React.FC<any> = () => {
     }
   }, []);
 
+  useEffect(()=>{
+    const preloadImage = new Image();
+    preloadImage.src = `/assets/work-nav.svg`;
+    preloadImage.onload = () => {
+      // Image preloaded
+    };
+  },[])
+  
+  
+
+
   return (
     <div
       ref={demoRef}

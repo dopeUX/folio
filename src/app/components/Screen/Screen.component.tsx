@@ -17,9 +17,12 @@ import Footer from "../Footer/Footer.component";
 import AboutPage from "../AboutPage/AboutPage.component";
 import ReduxStates from "../../actions/reduxStates";
 import ContactPage from "../ContactPage/ContactPage.component";
+import navItems from "../../data/navbarItems";
+import ReduxActions from "../../actions/reduxActions";
 
 const Screen: React.FC<any> = () => {
   const reduxStates = new ReduxStates();
+  const reduxActions = new ReduxActions();
   const isShowNavScreen = reduxStates.isShowNavScreen;
   const screenZoomState = reduxStates.screenZoomState;
   const heroSectionState:any = reduxStates.heroSectionState;
@@ -51,13 +54,32 @@ const Screen: React.FC<any> = () => {
   })
 
   useEffect(()=>{
-    setTimeout(() => {
-      dispatch(updateIsLoadingScreenTurnedOn(false));
-    },2000);
+    // setTimeout(() => {
+    //   // dispatch(updateIsLoadingScreenTurnedOn(false));
+    // },2000);
     setTimeout(()=>{
       dispatch(updateScreenZoomState('scale(1)'))
     },2300)
   },[]);
+
+  useEffect(()=>{
+    setTimeout(()=>{
+
+
+    const preloadImage = new Image();
+    let i = 0;
+    let len = navItems.length;
+    navItems.forEach((item, i)=>{
+      preloadImage.src = `/assets/${navItems[i].navImage}.svg`;
+      preloadImage.onload = () => {
+        // Image preloaded
+        if(i === len-1){
+          reduxActions.dismissLoadingScreen();
+        }
+      };
+    });
+   }, 2000);
+  })
   useEffect(() => {
     screenRef.current.style.transform = screenZoomState;
     // screenRef.current.style.opacity = 1;

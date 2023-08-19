@@ -53,7 +53,7 @@ const WorkPage:React.FC<any> = () =>{
 		setTimeout(()=>{
 			//min 1300 sec
 		   reduxActions.dismissLoadingScreen();
-		},5000)
+		},2000)
 	  }
 	},[])
 	return (
