@@ -49,6 +49,7 @@ const Header: React.FC<any> = ({ logoTitle, headerBgOn=true, currentPage = 'work
    }
   },[headerBgOn])
 
+
   useEffect(()=>{
     if(reduxStates.isMusicPlayerVisible){
       // disable the header for 2000 ms
