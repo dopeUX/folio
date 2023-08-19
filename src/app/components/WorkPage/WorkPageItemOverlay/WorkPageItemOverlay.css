@@ -132,14 +132,14 @@
 }
 .work-page-item-overlay .content .images-section-third .image2 {
   width: 250px;
-  height: 140px;
+  height: 155px;
   z-index: 98;
   margin-bottom: -20px;
   margin-left: -200px;
 }
 .work-page-item-overlay .content .images-section-third .image3 {
   width: 250px;
-  height: 140px;
+  height: 155px;
   z-index: 98;
   margin-bottom: -20px;
   margin-right: -200px;
@@ -152,7 +152,7 @@
     margin-left: -200px;
   }
   to {
-    margin-left: -100px;
+    margin-left: -50px;
   }
 }
 .work-page-item-overlay .content .images-section-third .img3-anim {
@@ -163,7 +163,7 @@
     margin-right: -200px;
   }
   to {
-    margin-right: -100px;
+    margin-right: -50px;
   }
 }
 .work-page-item-overlay .content p {

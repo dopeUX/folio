@@ -82,14 +82,14 @@ const WorkPageItemOverlay:React.FC<any> = () =>{
 	  }		
 	  if(className == 'second'){
 		return (<section className="images-section-second">
-	    <img className="img1-anim" src={'assets/'+workItem?.assets[0]} alt="" />
-	    <img className="image2 img2-anim" src={'assets/'+workItem?.assets[1]} alt="" />
+	    <img className="img1-anim" src={'assets/projectImages/'+workItem?.assets[0]} alt="" />
+	    <img className="image2 img2-anim" src={'assets/projectImages/'+workItem?.assets[1]} alt="" />
 	  </section>)
 	  }else if(className == 'third'){
         return (<section className="images-section-third">
-		<img className="image3 img3-anim" src={'assets/'+workItem?.assets[2]} alt="" />	
-	    <img className="image1 zoom-out" src={'assets/'+workItem?.assets[0]} alt="" />
-	    <img className="image2 img2-anim" src={'assets/'+workItem?.assets[1]} alt="" />
+		<img className="image3 img3-anim" src={'assets/projectImages/'+workItem?.assets[2]} alt="" />	
+	    <img className="image1 zoom-out" src={'assets/projectImages/'+workItem?.assets[0]} alt="" />
+	    <img className="image2 img2-anim" src={'assets/projectImages/'+workItem?.assets[1]} alt="" />
 	     </section>)
 	  }else {
 		return null;

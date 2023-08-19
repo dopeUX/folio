@@ -14,7 +14,7 @@ const workData:workProps[] = [
 	projectName:'Notes Pro',
 	projectDesc:'',
 	assets:[
-	 'notes-pro1.svg','projectimg1.png','projectimg1.png'	
+	 'notes-pro1.jpg','notes-pro2.jpg','notes-pro3.jpg'	
 	],
 	techStack:[],
 	githubUrl:'',
