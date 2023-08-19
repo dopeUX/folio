@@ -85,7 +85,7 @@ const WorkPage:React.FC<any> = () =>{
 
 				{/* //cards ---- */}
 				{workData.map((item:workProps, index:number)=>{
-					return <WorkPageItemCardNew title={item.projectName} image={`assets/`+item.assets[0]} index={index}/>
+					return <WorkPageItemCardNew title={item.projectName} image={`assets/projectImages/`+item.assets[0]} index={index}/>
 				})}
 				{/* <WorkPageItemCardNew title='Notes Pro' image='assets/projectimg1.png'/>
 				<WorkPageItemCardNew title='TeeRex' image='assets/projectimg2.png'/>

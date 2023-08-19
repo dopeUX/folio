@@ -83,7 +83,7 @@ const Screen: React.FC<any> = () => {
   return (
   //  <div className="screen-wrapper">
     <div ref={screenRef} className="screen" style={{zIndex:12}}>
-      <Header logoTitle="Dé" headerBgOn={isHeaderBg}/>
+      {/* <Header logoTitle="Dé" headerBgOn={isHeaderBg}/> */}
       {/* ///All Routes -------------- */}
       <section ref={heroSectionRef} className="hero-section">
         <Routes>

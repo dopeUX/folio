@@ -68,6 +68,8 @@
 .work-page .detailed-work-section .work-item-card .work-item-tile-image img {
   width: 250px;
   height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 20px;
   border: 3px solid #4BA74B;
 }
