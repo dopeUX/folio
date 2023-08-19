@@ -87,7 +87,7 @@ const Navigation: React.FC<any> = ({ isNavScreenOn }) => {
   return (
     <div ref={navScreenRef} className="navigation-screen">
       <div className="nav-image-wrapper">
-       {<img ref={navImageRef} src={`/assets/${navItems[currentNavIndex].navImage}.png`} alt="" />}
+       {/* {<img ref={navImageRef} src={`/assets/${navItems[currentNavIndex].navImage}.png`} alt="" />} */}
        </div>
       <div
         className="nav-screen-wrapper">
@@ -98,10 +98,10 @@ const Navigation: React.FC<any> = ({ isNavScreenOn }) => {
           className="nav-items"
           ref={navItemsRef}
           onMouseEnter={()=>{
-            setImageVisible(true);
+            // setImageVisible(true);
           }}
           onMouseLeave={()=>{
-            setImageVisible(false);
+            // setImageVisible(false);
           }}
           onClick={handleClickInside}
         >
