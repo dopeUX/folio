@@ -64,22 +64,23 @@ const Screen: React.FC<any> = () => {
 
   useEffect(()=>{
     setTimeout(()=>{
-
-
-    const preloadImage = new Image();
     let i = 0;
     let len = navItems.length;
-    navItems.forEach((item, i)=>{
-      preloadImage.src = `/assets/${navItems[i].navImage}.svg`;
+    navItems.forEach((item)=>{
+      const preloadImage = new Image();
+      preloadImage.src = `/assets${item.navImage}.svg`;
       preloadImage.onload = () => {
         // Image preloaded
+        console.log(i, 'weeeeeeee')
         if(i === len-1){
           reduxActions.dismissLoadingScreen();
+        }else{
+         i = i+1;
         }
       };
     });
    }, 2000);
-  })
+  },[])
   useEffect(() => {
     screenRef.current.style.transform = screenZoomState;
     // screenRef.current.style.opacity = 1;
