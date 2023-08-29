@@ -76,7 +76,7 @@ const WorkPageItemOverlay:React.FC<any> = () =>{
       if(className == 'first'){
 		return(
 			<section className="images-section-first">
-		     <img className="zoom-out" src={'assets/'+workItem?.assets[0]} alt="" />
+		     <img className="zoom-out" src={'assets/projectImages/'+workItem?.assets[0]} alt="" />
 			</section>
 		)
 	  }		

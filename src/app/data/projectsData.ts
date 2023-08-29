@@ -22,10 +22,10 @@ const workData:workProps[] = [
   },
   {
 	id:2,
-	projectName:'Notes Pro',
+	projectName:'Scoops n Smiles',
 	projectDesc:'',
 	assets:[
-	 'projectimg1.png','projectimg1.png'	
+	 'scoopsnsmiles1.jpg','scoopsnsmiles2.jpg', 'scoopsnsmiles3.jpg'	
 	],
 	techStack:[],
 	githubUrl:'',
@@ -36,8 +36,19 @@ const workData:workProps[] = [
 	projectName:'Teerex',
 	projectDesc:'',
 	assets:[
-	 'projectimg2.png',
-	 'projectimg2.png'
+	 'teerex1.jpg',
+	 'teerex2.jpg'
+	],
+	techStack:[],
+	githubUrl:'',
+	liveUrl:''
+  },
+  {
+	id:4,
+	projectName:'BreakFast UI',
+	projectDesc:'',
+	assets:[
+     'breakfast1.jpg'
 	],
 	techStack:[],
 	githubUrl:'',

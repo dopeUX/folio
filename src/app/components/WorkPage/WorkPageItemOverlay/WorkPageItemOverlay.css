@@ -42,8 +42,8 @@
   transition: clip-path 1s ease, -webkit-clip-path 1s ease;
 }
 .work-page-item-overlay .content .images-section-first img {
-  width: 430px;
-  height: 250px;
+  width: 700px;
+  height: 380px;
   border-radius: 20px;
   transform: scale(1);
   border: 3px solid #4BA74B;
@@ -60,15 +60,15 @@
   }
 }
 .work-page-item-overlay .content .images-section-second img {
-  width: 350px;
-  height: 200px;
+  width: 500px;
+  height: 300px;
   border-radius: 20px;
   transform: scale(0.8);
   border: 3px solid #4BA74B;
 }
 .work-page-item-overlay .content .images-section-second .image2 {
-  width: 280px;
-  height: 180px;
+  width: 460px;
+  height: 280px;
   margin-bottom: -20px;
   margin-left: -80px;
   transform: translate(30px, 30px);
@@ -110,8 +110,8 @@
   align-items: center;
 }
 .work-page-item-overlay .content .images-section-third img {
-  width: 380px;
-  height: 230px;
+  width: 600px;
+  height: 350px;
   z-index: 99;
   border-radius: 20px;
   border: 3px solid #4BA74B;
@@ -131,15 +131,15 @@
   }
 }
 .work-page-item-overlay .content .images-section-third .image2 {
-  width: 250px;
-  height: 155px;
+  width: 440px;
+  height: 255px;
   z-index: 98;
   margin-bottom: -20px;
   margin-left: -200px;
 }
 .work-page-item-overlay .content .images-section-third .image3 {
-  width: 250px;
-  height: 155px;
+  width: 440px;
+  height: 255px;
   z-index: 98;
   margin-bottom: -20px;
   margin-right: -200px;

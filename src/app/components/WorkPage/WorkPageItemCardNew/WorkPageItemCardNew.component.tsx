@@ -10,7 +10,7 @@ const WorkPageItemCardNew:React.FC<any> = ({title, image, index}) => {
         	}}>
 	        <h2 className="item-title">{title}</h2>
 	        <div className="work-item-tile-image">
-	        	<img className="" src={image} alt="" />
+	        	<img className="" loading="lazy" src={image} alt="" />
 	        </div>
         </div>)
 }
