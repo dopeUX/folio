@@ -1,4 +1,5 @@
 /* eslint-disable no-mixed-spaces-and-tabs */
+'use client';
 import React, { FC, useEffect, useRef, useLayoutEffect, useState } from "react";
 import "./Header.component.css";
 import { useDispatch, useSelector } from "react-redux";

@@ -1,4 +1,5 @@
 /* eslint-disable no-mixed-spaces-and-tabs */
+'use client';
 import React,{useEffect, useRef} from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../store/store";

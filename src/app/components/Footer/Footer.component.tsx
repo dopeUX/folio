@@ -1,4 +1,5 @@
 /* eslint-disable no-mixed-spaces-and-tabs */
+'use client';
 import React from "react";
 import './Footer.component.css';
 

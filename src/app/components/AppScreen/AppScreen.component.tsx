@@ -1,5 +1,6 @@
 /* eslint-disable no-irregular-whitespace */
 /* eslint-disable no-mixed-spaces-and-tabs */
+'use client';
 import React, { useEffect, useRef, useState } from "react";
 import "./AppScreen.component.css";
 import Screen from "../Screen/Screen.component";

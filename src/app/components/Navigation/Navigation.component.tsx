@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable no-mixed-spaces-and-tabs */
+'use client';
 import React, { useRef, useEffect, useState } from "react";
 import "./Navigation.component.css";
 import Navbar from "../../common/Navbar/Navbar";

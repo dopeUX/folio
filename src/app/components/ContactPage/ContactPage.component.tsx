@@ -1,3 +1,4 @@
+'use client';
 import React, { useEffect, useRef, useState } from "react";
 import ReduxActions from "../../actions/reduxActions";
 import ReduxStates from "../../actions/reduxStates";

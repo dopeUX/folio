@@ -1,4 +1,5 @@
 /* eslint-disable no-mixed-spaces-and-tabs */
+'use client';
 import React, { useEffect, useLayoutEffect, useRef } from "react";
 import "./Homepage.component.css";
 import Hamburger from "../../common/Hamburger/Hamburger";

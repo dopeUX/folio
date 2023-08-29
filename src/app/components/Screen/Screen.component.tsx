@@ -1,4 +1,5 @@
 /* eslint-disable no-mixed-spaces-and-tabs */
+'use client';
 import React, { useEffect, useRef, useState } from "react";
 import "./Screen.component.css";
 import Header from "../Header/Header.component";

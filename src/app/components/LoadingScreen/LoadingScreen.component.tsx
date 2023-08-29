@@ -1,3 +1,4 @@
+'use client';
 import React, { useEffect, useState, useRef, useLayoutEffect } from "react";
 import "./LoadingScreen.component.css";
 import { useDispatch, useSelector } from "react-redux";

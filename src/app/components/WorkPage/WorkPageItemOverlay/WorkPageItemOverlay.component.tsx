@@ -1,3 +1,4 @@
+'use client';
 import React, { useEffect, useRef, useState } from "react";
 import './WorkPageItemOverlay.css';
 import ReduxStates from "../../../actions/reduxStates";
