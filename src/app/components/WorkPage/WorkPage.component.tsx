@@ -93,8 +93,8 @@ const WorkPage:React.FC<any> = () =>{
 					<img src="assets/projectImages/scoopsnsmiles2.jpg" alt="" />
 					<img src="assets/projectImages/scoopsnsmiles3.jpg" alt="" />
 					<img src="assets/projectImages/teerex2.jpg" alt="" />
-					<img src="assets/projectImages/notespro2.jpg" alt="" />
-					<img src="assets/projectImages/notespro3.jpg" alt="" />
+					<img src="assets/projectImages/notes-pro2.jpg" alt="" />
+					<img src="assets/projectImages/notes-pro3.jpg" alt="" />
 				</div>
 				{/* <WorkPageItemCardNew title='Notes Pro' image='assets/projectimg1.png'/>
 				<WorkPageItemCardNew title='TeeRex' image='assets/projectimg2.png'/>
