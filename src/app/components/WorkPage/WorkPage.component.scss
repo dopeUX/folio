@@ -120,6 +120,10 @@
 			  background: linear-gradient(270deg, #EEE 0%, rgba(238, 238, 238, 0.98) 22.92%, rgba(238, 238, 238, 0.83) 46.88%, rgba(238, 238, 238, 0.71) 70.31%, rgba(238, 238, 238, 0.00) 100%);
 			//   background: linear-gradient(270deg, #EEE 0%, #EEE 26.04%, rgba(238, 238, 238, 0.10) 62.50%, rgba(238, 238, 238, 0.10) 100%);
 			}
+
+			.non-displaying-images{
+			   display: none;	
+			}
 	   }
   }
 }

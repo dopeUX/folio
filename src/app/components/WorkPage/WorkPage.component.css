@@ -107,6 +107,9 @@
   z-index: 99;
   background: linear-gradient(270deg, #EEE 0%, rgba(238, 238, 238, 0.98) 22.92%, rgba(238, 238, 238, 0.83) 46.88%, rgba(238, 238, 238, 0.71) 70.31%, rgba(238, 238, 238, 0) 100%);
 }
+.work-page .detailed-work-section .detailed-work-sec-items .non-displaying-images {
+  display: none;
+}
 
 .animate {
   background: linear-gradient(180deg, #13ef29, #476fff);
