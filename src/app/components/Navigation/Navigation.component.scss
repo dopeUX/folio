@@ -21,6 +21,10 @@
 	   left: 7rem;
 	   display: flex;
 	   align-items: center;
+
+	   .temp{
+		display: none;
+	   }
 		img{
 			width: 30rem;
 			top: 0;

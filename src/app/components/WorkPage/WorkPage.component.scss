@@ -27,6 +27,7 @@
 			position: relative;
 			padding-top: 55px;
 			margin-right: 2rem;
+			z-index: 99;
 			cursor: pointer;
 			// background-color: green;
 			 .item-title{
@@ -111,11 +112,11 @@
 			.white-grad-overlay{
               position: fixed;
 			  height: 100%;
-			  width:5rem;
+			  width:18rem;
 			  right: 0;
 			  padding-right: 3rem;
 			  margin-right: 0;
-			  z-index: 99;
+			  z-index: 101;
 			//   background: blue;
 			  background: linear-gradient(270deg, #EEE 0%, rgba(238, 238, 238, 0.98) 22.92%, rgba(238, 238, 238, 0.83) 46.88%, rgba(238, 238, 238, 0.71) 70.31%, rgba(238, 238, 238, 0.00) 100%);
 			//   background: linear-gradient(270deg, #EEE 0%, #EEE 26.04%, rgba(238, 238, 238, 0.10) 62.50%, rgba(238, 238, 238, 0.10) 100%);
@@ -156,7 +157,9 @@
 ::-webkit-scrollbar {
 	width: 3px;
 	height: 4px;
-	margin-top: 3rem;
+	top: 100px;
+	bottom: -100px;
+	margin-top: 0;
 	border-radius: 50%;
   }
   
@@ -169,8 +172,10 @@
   /* Handle */
   ::-webkit-scrollbar-thumb {
 	background: black;
+	background-color:#dc54b5;	
 	border-radius: 2rem;
-	margin-top: 2rem;
+	margin-top: 5rem;
+	padding: 5rem;
   }
   
   /* Handle on hover */

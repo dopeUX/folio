@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable no-mixed-spaces-and-tabs */
-'use client';
 import React, { useRef, useEffect, useState } from "react";
 import "./Navigation.component.css";
 import Navbar from "../../common/Navbar/Navbar";
@@ -88,7 +87,12 @@ const Navigation: React.FC<any> = ({ isNavScreenOn }) => {
   return (
     <div ref={navScreenRef} className="navigation-screen">
       <div className="nav-image-wrapper">
-       {/* {<img ref={navImageRef} src={`/assets/${navItems[currentNavIndex].navImage}.png`} alt="" />} */}
+       {<img ref={navImageRef} src={`/assets/${navItems[currentNavIndex].navImage}.svg`} alt="" />}
+        <div className="temp">
+          <img src="assets/reach-nav.svg" alt="" />
+          <img src="assets/work-nav.svg" alt="" />
+          <img src="assets/me-nav.svg" alt="" />
+        </div>
        </div>
       <div
         className="nav-screen-wrapper">
@@ -99,10 +103,10 @@ const Navigation: React.FC<any> = ({ isNavScreenOn }) => {
           className="nav-items"
           ref={navItemsRef}
           onMouseEnter={()=>{
-            // setImageVisible(true);
+            setImageVisible(true);
           }}
           onMouseLeave={()=>{
-            // setImageVisible(false);
+            setImageVisible(false);
           }}
           onClick={handleClickInside}
         >

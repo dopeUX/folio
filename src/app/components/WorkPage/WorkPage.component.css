@@ -29,6 +29,7 @@
   position: relative;
   padding-top: 55px;
   margin-right: 2rem;
+  z-index: 99;
   cursor: pointer;
 }
 .work-page .detailed-work-section .work-item-card .item-title {
@@ -100,11 +101,11 @@
 .work-page .detailed-work-section .detailed-work-sec-items .white-grad-overlay {
   position: fixed;
   height: 100%;
-  width: 5rem;
+  width: 18rem;
   right: 0;
   padding-right: 3rem;
   margin-right: 0;
-  z-index: 99;
+  z-index: 101;
   background: linear-gradient(270deg, #EEE 0%, rgba(238, 238, 238, 0.98) 22.92%, rgba(238, 238, 238, 0.83) 46.88%, rgba(238, 238, 238, 0.71) 70.31%, rgba(238, 238, 238, 0) 100%);
 }
 .work-page .detailed-work-section .detailed-work-sec-items .non-displaying-images {
@@ -130,7 +131,9 @@
 ::-webkit-scrollbar {
   width: 3px;
   height: 4px;
-  margin-top: 3rem;
+  top: 100px;
+  bottom: -100px;
+  margin-top: 0;
   border-radius: 50%;
 }
 
@@ -143,8 +146,10 @@
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: black;
+  background-color: #dc54b5;
   border-radius: 2rem;
-  margin-top: 2rem;
+  margin-top: 5rem;
+  padding: 5rem;
 }
 
 /* Handle on hover *//*# sourceMappingURL=WorkPage.component.css.map */
