@@ -95,9 +95,9 @@ const AppScreen: React.FC<any> = () => {
     >
 
         <div className="temp">
-          <img src="assets/reach-nav.svg" alt="" />
-          <img src="assets/work-nav.svg" alt="" />
-          <img src="assets/me-nav.svg" alt="" />
+          <img src="assets/reach-nav.jpg" alt="" />
+          <img src="assets/work-nav.jpg" alt="" />
+          <img src="assets/me-nav.jpg" alt="" />
         </div>
       {/* <Box/> */}
       {/* {isLoading && <BlurOverlayLoadingScreen />} */}

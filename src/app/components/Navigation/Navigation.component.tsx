@@ -87,7 +87,7 @@ const Navigation: React.FC<any> = ({ isNavScreenOn }) => {
   return (
     <div ref={navScreenRef} className="navigation-screen">
       <div className="nav-image-wrapper">
-       {<img ref={navImageRef} src={`/assets/${navItems[currentNavIndex].navImage}.svg`} alt="" />}
+       {<img ref={navImageRef} src={`/assets/${navItems[currentNavIndex].navImage}.jpg`} alt="" />}
  
        </div>
       <div
