@@ -6,7 +6,9 @@
 	justify-content: center;
 	align-items: center;
 	background-color: transparent;
-
+	.temp{
+		display: none;
+	}
 	.screen-nav-button{
 		width: fit-content;
 		height: fit-content;

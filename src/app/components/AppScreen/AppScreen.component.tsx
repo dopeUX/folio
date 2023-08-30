@@ -93,6 +93,12 @@ const AppScreen: React.FC<any> = () => {
         console.log("halooo");
       }}
     >
+
+        <div className="temp">
+          <img src="assets/reach-nav.svg" alt="" />
+          <img src="assets/work-nav.svg" alt="" />
+          <img src="assets/me-nav.svg" alt="" />
+        </div>
       {/* <Box/> */}
       {/* {isLoading && <BlurOverlayLoadingScreen />} */}
       {isLoading && <LoadingScreen />}

@@ -7,6 +7,9 @@
   align-items: center;
   background-color: transparent;
 }
+.AppScreen .temp {
+  display: none;
+}
 .AppScreen .screen-nav-button {
   width: -moz-fit-content;
   width: fit-content;

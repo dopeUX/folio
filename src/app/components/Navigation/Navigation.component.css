@@ -70,9 +70,6 @@ body {
   display: flex;
   align-items: center;
 }
-.navigation-screen .nav-image-wrapper .temp {
-  display: none;
-}
 .navigation-screen .nav-image-wrapper img {
   width: 30rem;
   top: 0;
