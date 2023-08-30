@@ -19,6 +19,7 @@ import Hamburger from "../../common/Hamburger/Hamburger";
 import ReduxActions from "../../actions/reduxActions";
 import ReduxStates from "../../actions/reduxStates";
 import WorkPageItemOverlay from "../WorkPage/WorkPageItemOverlay/WorkPageItemOverlay.component";
+import TitleLoadingScreen from "../TitledLoadingScreen/TitleLoadingScreen.component";
 
 const AppScreen: React.FC<any> = () => {
   const reduxStates = new ReduxStates();
@@ -102,6 +103,7 @@ const AppScreen: React.FC<any> = () => {
       {/* <Box/> */}
       {/* {isLoading && <BlurOverlayLoadingScreen />} */}
       {isLoading && <LoadingScreen />}
+      {/* <TitleLoadingScreen/> */}
       {/* /////TEST CODE ------- */}
       {/* <button
         onClick={() => {

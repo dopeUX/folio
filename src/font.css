@@ -22,3 +22,8 @@
 	font-family: 'Santa';
 	src: url('./fonts/santa.otf') format('opentype');
 }
+
+@font-face {
+	font-family: 'EB';
+	src: url('./fonts/EBGaramond-Bold.ttf') format('truetype');
+}

@@ -1,0 +1,14 @@
+.title-loading-screen {
+  z-index: 999;
+  width: 100%;
+  background-color: white;
+  height: 100%;
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+}
+.title-loading-screen h1 {
+  font-size: 35rem;
+  font-family: "EB", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}/*# sourceMappingURL=TitleLoadingScreen.component.css.map */
