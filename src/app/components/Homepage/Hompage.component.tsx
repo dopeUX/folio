@@ -9,6 +9,7 @@ import { RootState } from "../../store/store";
 import colorPallete from "../../data/colorPallete";
 import ReduxActions from "../../actions/reduxActions";
 import ReduxStates from "../../actions/reduxStates";
+import workData from "../../data/projectsData";
 
 const Homepage: React.FC<any> = () => {
   //   const accentColor = useSelector((state: RootState) => {
@@ -22,6 +23,7 @@ const Homepage: React.FC<any> = () => {
   const isLoadingScreenTurnedOn = reduxStates.isLoadingScreenTurnedOn;
   const accentColor = colorPallete[colorPalleteIndex].colorHex;
   const imageRef: any = useRef();
+  let count:number = 0;
   const audioRef:any = useRef(null);
   useLayoutEffect(() => {
     imageRef.current.style.filter = colorPallete[colorPalleteIndex].filter;
@@ -33,13 +35,15 @@ const Homepage: React.FC<any> = () => {
     if(isLoadingScreenTurnedOn){
       setTimeout(()=>{
         //min 1300 sec
-         reduxActions.dismissLoadingScreen();
+        //  reduxActions.dismissLoadingScreen();
+        // loadProjectImages();
       },5000)
       }
   },[reduxStates.isLoadingScreenTurnedOn])
   useEffect(()=>{
     // audioRef.current.play()
   })
+
   return (
     <section className="homepage">
       <h1 className="homepage-head">Bonsoir!</h1>

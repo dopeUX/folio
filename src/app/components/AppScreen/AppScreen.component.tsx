@@ -82,8 +82,6 @@ const AppScreen: React.FC<any> = () => {
       // Image preloaded
     };
   },[])
-  
-  
 
 
   return (
@@ -137,6 +135,7 @@ const AppScreen: React.FC<any> = () => {
     </div>
   );
 };
+
 
 function musicApp() {
   return (

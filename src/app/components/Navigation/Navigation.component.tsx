@@ -89,9 +89,16 @@ const Navigation: React.FC<any> = ({ isNavScreenOn }) => {
     <div ref={navScreenRef} className="navigation-screen">
       <div className="nav-image-wrapper">
        {/* {<img loading="lazy" ref={navImageRef} src={`/assets/${navItems[currentNavIndex].navImage}.svg`} alt="" />} */}
-       {<img style={{display:showImage && currentNavIndex===0?'block':'none'}} loading="lazy" src={`/assets/work-nav.svg`} alt="" />}
+       {
+        navItems.map((item:any, i:number)=>{
+          return (
+            <img style={{display:showImage && currentNavIndex===i?'block':'none'}} loading="lazy" src={`/assets/${item.navImage}`} alt="" />
+          )
+        })
+       }
+       {/* {<img style={{display:showImage && currentNavIndex===0?'block':'none'}} loading="lazy" src={`/assets/work-nav.svg`} alt="" />}
        {<img style={{display:showImage && currentNavIndex===1?'block':'none'}} loading="lazy" src={`/assets/me-nav.svg`} alt="" />}
-       {<img style={{display:showImage && currentNavIndex===2?'block':'none'}} loading="lazy" src={`/assets/reach-nav.svg`} alt="" />}
+       {<img style={{display:showImage && currentNavIndex===2?'block':'none'}} loading="lazy" src={`/assets/reach-nav.svg`} alt="" />} */}
  
        </div>
       <div

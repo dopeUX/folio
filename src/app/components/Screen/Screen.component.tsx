@@ -20,6 +20,7 @@ import ReduxStates from "../../actions/reduxStates";
 import ContactPage from "../ContactPage/ContactPage.component";
 import navItems from "../../data/navbarItems";
 import ReduxActions from "../../actions/reduxActions";
+import workData from "../../data/projectsData";
 
 const Screen: React.FC<any> = () => {
   const reduxStates = new ReduxStates();
@@ -65,23 +66,43 @@ const Screen: React.FC<any> = () => {
 
   useEffect(()=>{
     setTimeout(()=>{
-    let i = 0;
-    let len = navItems.length;
-    navItems.forEach((item)=>{
-      const preloadImage = new Image();
-      preloadImage.src = `/assets${item.navImage}.png`;
-      preloadImage.onload = () => {
-        // Image preloaded
-        console.log(i, 'weeeeeeee')
-        if(i === len-1){
-          reduxActions.dismissLoadingScreen();
-        }else{
-         i = i+1;
-        }
-      };
-    });
+     loadProjectImages();    
    }, 2000);
   },[])
+  
+  const loadNavigationImages = async() => {
+    let itr = 0;
+    let len = navItems.length;
+    navItems.forEach((item:any, i:number)=>{
+      const preloadImage = new Image();
+        preloadImage.src = `/assets/${item.navImage}`
+        preloadImage.onload = () =>{
+          if(i === len-1){
+            reduxActions.dismissLoadingScreen();
+          }
+        }
+    })
+  }
+  const loadProjectImages = async() =>{
+    let itr = 0;
+    let len = workData.length;
+    workData.forEach((item:any, i)=>{
+      item?.assets.forEach((y:any, j:number)=>{
+        const preloadImage = new Image();
+        let len2 = item?.assets.length;
+        preloadImage.src = `/assets/projectImages/${y}`;
+        preloadImage.onload = () => {
+          // Image preloaded
+          console.log(itr, 'weeeeeeee')
+          if(i === len-1 && len2-1 === j){
+            loadNavigationImages();
+          }else{
+           itr = itr+1;
+          }
+        };
+      })
+    });
+  }
   useEffect(() => {
     screenRef.current.style.transform = screenZoomState;
     // screenRef.current.style.opacity = 1;
