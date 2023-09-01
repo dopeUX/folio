@@ -79,6 +79,8 @@ const Screen: React.FC<any> = () => {
         preloadImage.onload = () =>{
           if(i === len-1){
             reduxActions.dismissLoadingScreen();
+          }else{
+            itr = itr++
           }
         }
     })
