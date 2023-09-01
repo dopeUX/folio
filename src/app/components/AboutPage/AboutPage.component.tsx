@@ -33,9 +33,9 @@ const AboutPage:React.FC<any> = () =>{
 	},[]);  
 	useEffect(()=>{
       if(isLoadingScreenTurnedOn){
-		setTimeout(()=>{
-			reduxActions.dismissLoadingScreen();
-		}, 5000)
+		// setTimeout(()=>{
+		// 	reduxActions.dismissLoadingScreen();
+		// }, 5000)
 	  }
 	},[]);
 
