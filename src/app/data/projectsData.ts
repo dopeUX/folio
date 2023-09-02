@@ -53,6 +53,28 @@ const workData:workProps[] = [
 	techStack:[],
 	githubUrl:'',
 	liveUrl:''
+  },
+  {
+	id:5,
+	projectName:'Home Inc.',
+	projectDesc:'',
+	assets:[
+     'homeinc.jpg'
+	],
+	techStack:[],
+	githubUrl:'',
+	liveUrl:''
+  },
+  {
+	id:6,
+	projectName:'Starbucks',
+	projectDesc:'',
+	assets:[
+     'starbuks.jpg'
+	],
+	techStack:[],
+	githubUrl:'',
+	liveUrl:''
   }
 ]
 

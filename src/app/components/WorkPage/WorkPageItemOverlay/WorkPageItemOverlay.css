@@ -45,6 +45,8 @@
   width: 700px;
   height: 380px;
   border-radius: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
   transform: scale(1);
   border: 3px solid #4BA74B;
 }
