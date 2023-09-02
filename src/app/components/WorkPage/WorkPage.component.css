@@ -36,6 +36,9 @@
   font-size: 0.9rem;
   color: #7c7c7c;
 }
+.work-page .detailed-work-section .work-item-card a {
+  text-decoration: none;
+}
 .work-page .detailed-work-section .work-item-card .item-title {
   color: black;
   position: absolute;
@@ -113,9 +116,10 @@
 }
 
 .animate {
+  cursor: pointer;
   background: linear-gradient(180deg, #13ef29, #476fff);
   background-size: 400% 400%;
-  animation: AnimationName 10s ease infinite;
+  animation: AnimationName 5s ease infinite;
 }
 @keyframes AnimationName {
   0% {

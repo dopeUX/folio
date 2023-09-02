@@ -79,9 +79,11 @@ const WorkPage:React.FC<any> = () =>{
 			<div className="white-grad-overlay"></div>
 				<div className="work-item-card">
 					<h3 className="item-title">De</h3>
+					<a href="https://www.github.com/dopeUX" target="_blank">
 					<div className="work-item-tile animate">
 						<h4>Explore github.</h4>
 					</div>
+					</a>
 				</div>
 
 				{/* //cards ---- */}
