@@ -52,6 +52,7 @@ const Navbar: React.FC<NavbarProps> = ({ navItems, onItemHover, onItemClick }) =
               e.preventDefault();
               onItemClick();
                reduxActions.changeRoute(navItems[index].route);
+               reduxActions.updateCurrentNavIndex(index);
              }}>
               {item.title}
             </a>

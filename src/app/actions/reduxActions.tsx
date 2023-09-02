@@ -1,7 +1,7 @@
 /* eslint-disable no-mixed-spaces-and-tabs */
 /* eslint-disable @typescript-eslint/no-empty-function */
 import { useDispatch } from "react-redux";
-import { updateColorPalleteIndex,updateIsMusicPlayerVisible, updateIsLoading, updateNavScreenState, updateScreenZoomState, updateIsWorkItemOverlay, updateIsWorkItemOverlayTurnedOn, updateCurrentWorkItemIndex, updateHeroSectionState } from "../store/AppSlice";
+import { updateColorPalleteIndex,updateIsMusicPlayerVisible, updateIsLoading, updateNavScreenState, updateScreenZoomState, updateIsWorkItemOverlay, updateIsWorkItemOverlayTurnedOn, updateCurrentWorkItemIndex, updateHeroSectionState, updateCurrentNavIndex } from "../store/AppSlice";
 import { updateIsLoadingScreenTurnedOn } from "../store/AppSlice";
 import { useNavigate } from "react-router-dom";
 
@@ -91,6 +91,10 @@ export default class ReduxActions {
 
 	updateCurrentWorkItemIndex(index:number): void{
 		this.dispatch(updateCurrentWorkItemIndex(index));
+	}
+
+	updateCurrentNavIndex(index:number): void {
+		this.dispatch(updateCurrentNavIndex(index))
 	}
 
 	

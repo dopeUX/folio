@@ -8,6 +8,7 @@ import colorPallete from "../../data/colorPallete";
 import { updateColorPalleteIndex } from "../../store/AppSlice";
 import ReduxStates from "../../actions/reduxStates";
 import ReduxActions from "../../actions/reduxActions";
+import navItems from "../../data/navbarItems";
 
 const Header: React.FC<any> = ({ logoTitle, headerBgOn=true, currentPage = 'work.' }) => {
   const profileImageRef: any = useRef();
@@ -68,7 +69,7 @@ const Header: React.FC<any> = ({ logoTitle, headerBgOn=true, currentPage = 'work
         // reduxActions.updateIsMusicPlayer(true);
        }}>{logoTitle}</h1>
        {
-         isHeaderBg && <h4 ref={titlePageRef}>{currentPage}</h4>
+         isHeaderBg && <h4 ref={titlePageRef}>{navItems[reduxStates.currentNavIndex].headerTitle}</h4>
        }
       </section>
       <a

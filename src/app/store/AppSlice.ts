@@ -20,7 +20,8 @@ const initialState = {
 	isMusicPlayerVisible:false,
 	isWorkItemOverlayTurnedOn:false,
 	isWorkItemOverlay:false,
-	currentWorkItemIndex:0
+	currentWorkItemIndex:0,
+	currentNavIndex:0
 }
 
 const AppSlice = createSlice({
@@ -80,6 +81,9 @@ const AppSlice = createSlice({
 	  },
 	  updateHeroSectionState:(state, action)=>{
 		state.heroSectionState = action.payload
+	  },
+	  updateCurrentNavIndex:(state, action)=>{
+		state.currentNavIndex = action.payload
 	  }
 	}
 })
@@ -95,6 +99,7 @@ export const {
 	updateIsWorkItemOverlay,
 	updateIsWorkItemOverlayTurnedOn,
 	updateCurrentWorkItemIndex,
-	updateHeroSectionState
+	updateHeroSectionState,
+	updateCurrentNavIndex
 } = AppSlice.actions;
 export default AppSlice.reducer;

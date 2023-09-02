@@ -4,19 +4,22 @@ const navItems = [
 	  name:'work',
 	  title:'work.',
 	  navImage:'work-nav.svg',
-	  route:'/work'
+	  route:'/work',
+	  headerTitle:'work.'
 	},
 	{
 	  name:'me',
 	  title:'me?',
 	  navImage:'me-nav.svg',
-	  route:'/about'	
+	  route:'/about'	,
+	  headerTitle:'about.'
 	},
 	{
 	  name:'reach',
 	  title:'reach.',
 	  navImage:'reach-nav.svg',
-	  route:'/reach'
+	  route:'/reach',
+	  headerTitle:'reach.'
 	}
 ]
 

@@ -57,4 +57,8 @@ export default class ReduxStates {
 	currentWorkItemIndex = useSelector((state: RootState)=>{
 		return state.appReducer.currentWorkItemIndex;
 	})
+
+	currentNavIndex = useSelector((state:RootState)=>{
+		return state.appReducer.currentNavIndex;
+	})
 }
