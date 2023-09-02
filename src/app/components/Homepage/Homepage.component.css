@@ -112,4 +112,235 @@
   width: 20px;
   height: 20px;
   margin: auto auto auto 1rem;
+}
+
+@media only screen and (max-width: 875px) {
+  .homepage {
+    display: block;
+    margin-top: 1.3rem;
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .homepage h1 {
+    margin: 0;
+    padding: 5rem;
+    font-family: santa, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    margin-top: 1rem;
+    margin-left: -5rem;
+    margin-bottom: -7rem;
+    font-weight: 300;
+    font-size: 10rem;
+    z-index: 2;
+  }
+  .homepage p {
+    width: 500px;
+    font-size: 0.9rem;
+    font-family: NeueMontreal-Regular, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    color: #8b8b8b;
+  }
+  .homepage .bottom-container {
+    display: flex;
+    width: 100%;
+    margin-top: 3rem;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+  .homepage .bottom-container .homepage-social-logos {
+    display: flex;
+  }
+  .homepage .bottom-container .homepage-social-logos img {
+    width: 50px;
+    height: 50px;
+    margin-right: 3rem;
+    transition: all 1s ease-in-out;
+  }
+  .homepage .bottom-container .bottom-right-hlinks {
+    width: -moz-fit-content;
+    width: fit-content;
+    display: flex;
+    color: red;
+    align-items: baseline;
+    margin-bottom: 0;
+    margin-right: 2rem;
+  }
+  .homepage .bottom-container .bottom-right-hlinks p {
+    width: -moz-fit-content;
+    width: fit-content;
+    color: #EF13B2;
+    margin-left: 2rem;
+    margin-bottom: 0;
+    bottom: 0;
+    font-size: 1.2rem;
+  }
+  .homepage .bottom-container a {
+    text-decoration: none;
+  }
+  .homepage .bottom-container .homepage-download-btn {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: auto 0 0rem auto;
+  }
+  .homepage .bottom-container .homepage-download-btn .download-btn-icon {
+    transition: all 1s ease-in-out;
+    width: 20px;
+    height: 20px;
+    margin: auto auto auto 1rem;
+  }
+}
+@media only screen and (max-width: 747px) {
+  .homepage {
+    display: block;
+    margin-top: 1.3rem;
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .homepage h1 {
+    margin: 0;
+    padding: 5rem;
+    font-family: santa, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    margin-top: 1rem;
+    margin-left: -5rem;
+    margin-bottom: -6rem;
+    font-weight: 300;
+    font-size: 7rem;
+    z-index: 2;
+  }
+  .homepage p {
+    width: 370px;
+    font-size: 0.9rem;
+    font-family: NeueMontreal-Regular, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    color: #8b8b8b;
+  }
+  .homepage .bottom-container {
+    display: flex;
+    width: 100%;
+    margin-top: 3rem;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+  .homepage .bottom-container .homepage-social-logos {
+    display: flex;
+  }
+  .homepage .bottom-container .homepage-social-logos img {
+    width: 50px;
+    height: 50px;
+    margin-right: 3rem;
+    transition: all 1s ease-in-out;
+  }
+  .homepage .bottom-container .bottom-right-hlinks {
+    width: -moz-fit-content;
+    width: fit-content;
+    display: flex;
+    color: red;
+    align-items: baseline;
+    margin-bottom: 0;
+    margin-right: 2rem;
+  }
+  .homepage .bottom-container .bottom-right-hlinks p {
+    width: -moz-fit-content;
+    width: fit-content;
+    color: #EF13B2;
+    margin-left: 2rem;
+    margin-bottom: 0;
+    bottom: 0;
+    font-size: 1.2rem;
+  }
+  .homepage .bottom-container a {
+    text-decoration: none;
+  }
+  .homepage .bottom-container .homepage-download-btn {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: auto 0 0rem auto;
+  }
+  .homepage .bottom-container .homepage-download-btn .download-btn-icon {
+    transition: all 1s ease-in-out;
+    width: 20px;
+    height: 20px;
+    margin: auto auto auto 1rem;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .homepage {
+    display: block;
+    margin-top: 1.3rem;
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .homepage h1 {
+    margin: 0;
+    padding: 5rem;
+    font-family: santa, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    margin-top: 1rem;
+    margin-left: -5rem;
+    margin-bottom: -6rem;
+    font-weight: 300;
+    font-size: 5rem;
+    z-index: 2;
+  }
+  .homepage p {
+    width: 300px;
+    font-size: 0.7rem;
+    font-family: NeueMontreal-Regular, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    color: #8b8b8b;
+  }
+  .homepage .bottom-container {
+    display: block;
+    width: 100%;
+    margin-top: 3rem;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+  .homepage .bottom-container .homepage-social-logos {
+    display: flex;
+  }
+  .homepage .bottom-container .homepage-social-logos img {
+    width: 30px;
+    height: 30px;
+    margin-right: 3rem;
+    transition: all 1s ease-in-out;
+  }
+  .homepage .bottom-container .bottom-right-hlinks {
+    width: -moz-fit-content;
+    width: fit-content;
+    display: flex;
+    color: red;
+    align-items: baseline;
+    margin-bottom: 0;
+    margin-right: 2rem;
+    margin-left: 0.2rem;
+  }
+  .homepage .bottom-container .bottom-right-hlinks p {
+    width: -moz-fit-content;
+    width: fit-content;
+    color: #EF13B2;
+    margin-left: 0rem;
+    margin-right: 1rem;
+    margin-bottom: 0;
+    bottom: 0;
+    font-size: 1.2rem;
+  }
+  .homepage .bottom-container a {
+    text-decoration: none;
+  }
+  .homepage .bottom-container .homepage-download-btn {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: auto 0 0rem auto;
+  }
+  .homepage .bottom-container .homepage-download-btn .download-btn-icon {
+    transition: all 1s ease-in-out;
+    width: 20px;
+    height: 20px;
+    margin: auto auto auto 1rem;
+  }
 }/*# sourceMappingURL=Homepage.component.css.map */
