@@ -186,3 +186,44 @@
 
 }
 
+@media only screen and (max-width:520px) {
+  .loading-screen{
+
+    .loading-screen-wrapper{
+        
+        p{
+            width: 380px;
+            // transform: scale(1.1);
+            transform: translateY(0rem);
+            // color: black;
+            color: white;
+            // margin-top: -5rem;
+            font-size: .9rem;
+            font-family:NeueMontreal-Medium, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+    }
+
+  }
+}
+
+@media only screen and (max-width:400px) {
+  .loading-screen{
+
+    .loading-screen-wrapper{
+        
+        p{
+            width: 250px;
+            // transform: scale(1.1);
+            transform: translateY(0rem);
+            // color: black;
+            color: white;
+            // margin-top: -5rem;
+            font-size: .7rem;
+            font-family:NeueMontreal-Medium, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+    }
+
+  }
+}

@@ -35,7 +35,7 @@ const Homepage: React.FC<any> = () => {
     if(isLoadingScreenTurnedOn){
       setTimeout(()=>{
         //min 1300 sec
-         reduxActions.dismissLoadingScreen();
+        //  reduxActions.dismissLoadingScreen();
         // loadProjectImages();
       },5000)
       }
