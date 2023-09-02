@@ -73,4 +73,10 @@ header .header-image {
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   background-color: rgba(222, 222, 222, 0.662745098);
+}
+
+@media only screen and (max-width: 500px) {
+  header {
+    width: 90%;
+  }
 }/*# sourceMappingURL=Header.component.css.map */

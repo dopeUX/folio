@@ -68,4 +68,78 @@
 .AppScreen .music-player .music-play {
   width: 40px;
   height: 40px;
+}
+
+@media only screen and (max-width: 500px) {
+  .AppScreen {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+  }
+  .AppScreen .temp {
+    display: none;
+  }
+  .AppScreen .screen-nav-button {
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    position: fixed;
+    top: 50%;
+    z-index: 23;
+    transform: translateY(-50%);
+    left: auto;
+    right: 0rem;
+    margin-right: 2rem;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .AppScreen .music-player {
+    position: fixed;
+    bottom: 3rem;
+    display: flex;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 2rem;
+    border-radius: 20px;
+    z-index: 99;
+    box-shadow: 0 0 20px 3px rgba(145, 145, 145, 0.409);
+    background-color: rgba(231, 231, 231, 0.762);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+  }
+  .AppScreen .music-player img {
+    width: 60px;
+    height: 60px;
+    z-index: 98;
+  }
+  .AppScreen .music-player .music-details {
+    text-align: center;
+    display: block;
+    margin: 0.5rem 2.6rem;
+    align-items: center;
+    justify-content: center;
+  }
+  .AppScreen .music-player .music-details h4 {
+    font-size: 1.1rem;
+    margin: 0;
+    margin-bottom: 0.5rem;
+  }
+  .AppScreen .music-player .music-details p {
+    font-size: 0.9rem;
+    margin: 0;
+    color: #8b8b8b;
+  }
+  .AppScreen .music-player .music-play {
+    width: 40px;
+    height: 40px;
+  }
 }/*# sourceMappingURL=AppScreen.component.css.map */

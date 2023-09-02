@@ -22,9 +22,9 @@ const Homepage: React.FC<any> = () => {
   const reduxStates = new ReduxStates();
   const isLoadingScreenTurnedOn = reduxStates.isLoadingScreenTurnedOn;
   const accentColor = colorPallete[colorPalleteIndex].colorHex;
-  // const imageRef: any = useRef();
+  const imageRef: any = useRef();
   let count:number = 0;
-  // const audioRef:any = useRef(null);
+  const audioRef:any = useRef(null);
   useLayoutEffect(() => {
     // imageRef.current.style.filter = colorPallete[colorPalleteIndex].filter;
     // accentColor = colorPallete[colorPalleteIndex].colorHex;

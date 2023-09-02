@@ -76,3 +76,9 @@ header{
   backdrop-filter: blur(10px);
   background-color: #dededea9;
 }
+
+@media only screen and (max-width:500px){
+  header{
+    width:90%;
+  }
+}
