@@ -21,6 +21,7 @@ const LoadingScreen: React.FC<any> = () => {
   const bgImageRef: any = useRef();
   const initialRender = useRef(true);
   const quoteRef: any = useRef();
+  const quoterRef:any = useRef();
   const wrapperImageRef: any = useRef();
   const [isPlaying, setIsPlaying] = useState("");
   const audioRef: any = useRef(null);
@@ -60,6 +61,7 @@ const LoadingScreen: React.FC<any> = () => {
       wrapperImageRef.current.style.animation = "zoom-in .6s forwards ease";
       setTimeout(() => {
         quoteRef.current.style.animation = "textAnim 1.3s forwards ease";
+        quoterRef.current.style.animation = "textAnim 1.3s forwards ease";
       }, 750);
       // setTimeout(()=>{
       //   quoteRef.current.style.animation = "textAnimSlideUpSlow 12s forwards ease"
@@ -67,6 +69,7 @@ const LoadingScreen: React.FC<any> = () => {
     } else {
       /// destroying the component ----
       quoteRef.current.style.animation = "textAnimRemove .4s forwards ease";
+      quoterRef.current.style.animation = "textAnimRemove .4s forwards ease";
       dispatch(updateLoadingMusicState(false));
       setTimeout(() => {
         //must be less than 1200
@@ -96,7 +99,9 @@ const LoadingScreen: React.FC<any> = () => {
       }}
     >
       <div className="loading-screen-wrapper">
-        <p ref={quoteRef}>"Bichess lie, compilers don't!"</p>
+        {/* <p ref={quoteRef}>"Bichess lie, compilers don't!"</p> */}
+       <p ref={quoteRef}>“Nothing, to my way of thinking, is a better proof of a well ordered mind than a man’s ability to stop just where he is and pass some time in his own company.”</p>
+       <p ref={quoterRef}>- Seneca</p>
       </div>
       <div ref={wrapperImageRef} className="loading-screen-image-wrapper">
         {/* <button

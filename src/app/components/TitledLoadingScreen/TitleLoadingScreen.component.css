@@ -11,4 +11,20 @@
 .title-loading-screen h1 {
   font-size: 35rem;
   font-family: "EB", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: url("assets/bgimage.png");
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 120%;
+  animation: bg-anim 30s cubic-bezier(0.075, 0.82, 0.165, 1) infinite;
+}
+@keyframes bg-anim {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
 }/*# sourceMappingURL=TitleLoadingScreen.component.css.map */

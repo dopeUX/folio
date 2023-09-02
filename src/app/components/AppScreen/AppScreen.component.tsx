@@ -100,7 +100,7 @@ const AppScreen: React.FC<any> = () => {
         </div>
       {/* <Box/> */}
       {/* {isLoading && <BlurOverlayLoadingScreen />} */}
-      {isLoading && <LoadingScreen />}
+      {isLoading && <LoadingScreen/>}
       {/* <TitleLoadingScreen/> */}
       {/* /////TEST CODE ------- */}
       {/* <button
