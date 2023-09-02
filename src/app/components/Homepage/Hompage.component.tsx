@@ -53,7 +53,7 @@ const Homepage: React.FC<any> = () => {
      
      <section className="bottom-container">
       <div className="homepage-social-logos">
-        <a href="">
+        <a href="https://www.github.com/dopeUX" target="_blank">
           <img
             ref={imageRef}
             className={`${colorPallete[colorPalleteIndex].name}`}
@@ -61,7 +61,7 @@ const Homepage: React.FC<any> = () => {
             alt=""
           />
         </a>
-        <a href="">
+        <a href="https://www.linkedin.com/in/shreyash-fulzele" target="_blank">
           <img
             ref={imageRef}
             className={`${colorPallete[colorPalleteIndex].name}`}
