@@ -26,4 +26,19 @@
   width: -moz-fit-content;
   width: fit-content;
   margin-left: 1rem;
+}
+
+@media only screen and (max-width: 800px) {
+  .contact-page h1 {
+    margin: 0;
+    font-size: 6rem;
+    transition: font-size 0.3s ease;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .contact-page h1 {
+    margin: 0;
+    font-size: 4rem;
+    transition: font-size 0.3s ease;
+  }
 }/*# sourceMappingURL=ContactPage.component.css.map */
