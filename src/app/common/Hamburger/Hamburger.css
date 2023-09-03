@@ -12,4 +12,22 @@
 .hamburger .middle-dot {
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .hamburger {
+    padding: 1rem;
+  }
+  .hamburger .hamburger-dot {
+    width: 1.5em;
+    height: 1.5em;
+    opacity: 1;
+    background-color: black;
+    border-radius: 50%;
+    transition: all 0.5s ease-in-out;
+  }
+  .hamburger .middle-dot {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
 }/*# sourceMappingURL=Hamburger.css.map */

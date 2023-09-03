@@ -15,3 +15,23 @@
 		margin-bottom: 1rem;
 	}
 }
+
+@media only screen and (max-width:600px) {
+	.hamburger{
+		// display: flex;
+		padding: 1rem;
+		.hamburger-dot{
+			width: 1.5em;
+			height: 1.5em;
+			opacity: 1;
+			// margin-bottom: 1rem;
+			background-color: black;
+			border-radius: 50%;
+			transition: all .5s ease-in-out;
+		}
+		.middle-dot{
+			margin-top: 1em;
+			margin-bottom: 1em;
+		}
+	}
+}
