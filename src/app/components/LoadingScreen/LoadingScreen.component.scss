@@ -4,6 +4,8 @@
     position: fixed;
     display: flex;
     place-items: center;
+    justify-content: center;
+    align-items: center;
     z-index: 99999;
     top: 0;
     bottom: 0;
@@ -35,7 +37,8 @@
         width: 100%;
         height: 100vh;
         overflow: hidden;
-        display: inline-block;
+        display: flex;
+        place-items: center;
         // background-color: black;
         
         @keyframes zoom-in {
@@ -86,11 +89,10 @@
             z-index: 99999;
         }
        img{
-        margin: 0;
+        margin: auto;
         margin-top: 55%;
-        margin-bottom: 100px;
-        padding: 0;
-        width: 100%;
+        margin-bottom: 0;
+        width: 70%;
         height: 100vh;
         object-fit: cover; 
         animation: slideDownImage .6s forwards ease-in;
@@ -188,7 +190,97 @@
 
 @media only screen and (max-width:520px) {
   .loading-screen{
+    .loading-screen-image-wrapper{
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      place-items: center;
+      // background-color: black;
+      
+      @keyframes zoom-in {
+        from{
+          transform: scale(0.8);
+        }
+        to{
+          transform: scale(1);
+        }
+      }
+      @keyframes zoom-out {
+        from{
+          transform: scale(1);
+        }
+        to{
+          transform: scale(0.8);
+        }
+      }
 
+      .vdeo{
+        margin: 0;
+        margin-top: 20%;
+        // transform: scale(0.8);
+        // margin-bottom: 100px;
+        object-fit: cover;
+        object-position: center;
+        // animation: slideDownImage .5s;
+
+        @keyframes slideDownImage {
+          from{
+            margin-top:20%;  
+          }
+          to{
+            margin-top:0;  
+          }
+        }
+       @keyframes slideUpImage {
+          from{
+            margin-top:0;  
+          }
+          to{
+            margin-top:10%;  
+          }
+        }
+      }
+      .test{
+          position: absolute;
+          z-index: 99999;
+      }
+     img{
+      // margin: 0;
+      // margin-top: 55%;
+      // margin-bottom: 100px;
+      padding: 0;
+      width: 70%;
+      height: 70vh;
+      margin: auto;
+      // margin: auto;
+      margin-top: 0;
+      margin-bottom: 0;
+      // height: 100vh;
+      object-fit: cover; 
+      // animation: slideDownImage .6s forwards ease-in;
+      
+      @keyframes slideDownImage {
+          from{
+            margin-top:55%;  
+          }
+          to{
+            margin-top:0;  
+          }
+      }
+      @keyframes slideUpImage {
+          from{
+            margin-top:0;  
+          }
+          to{
+            margin-top:55%;  
+          }
+      }
+      // animation: zoomIn 30s forwards ease-in-out;
+      // transform:scale(1.5);
+      // transition: transform 30s;
+    }
+  }
     .loading-screen-wrapper{
         
         p{
