@@ -7,8 +7,8 @@
 }
 .navbar-items li {
   font-family: NeueMontreal-Medium, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 4rem;
-  margin-bottom: 1rem;
+  font-size: 4em;
+  margin-bottom: 0.2em;
 }
 .navbar-items li a {
   text-decoration: none;
@@ -32,5 +32,44 @@
   }
   100% {
     background-position: 100% 50%;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .navbar-items {
+    display: block;
+    height: -moz-fit-content;
+    height: fit-content;
+    list-style-type: none;
+    text-align: right;
+  }
+  .navbar-items li {
+    font-family: NeueMontreal-Medium, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  .navbar-items li a {
+    text-decoration: none;
+    color: inherit;
+  }
+  .navbar-items .test {
+    background-color: blue;
+  }
+  .navbar-items .gradient-anim {
+    background: linear-gradient(to right, #7953cd 20%, #00affa 30%, #0190cd 70%, #764ada 80%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    background-size: 500% auto;
+    animation: textShine 3s ease-in-out infinite alternate;
+  }
+  @keyframes textShine {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
   }
 }/*# sourceMappingURL=Navbar.css.map */

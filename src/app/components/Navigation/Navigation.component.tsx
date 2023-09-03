@@ -92,7 +92,7 @@ const Navigation: React.FC<any> = ({ isNavScreenOn }) => {
        {
         navItems.map((item:any, i:number)=>{
           return (
-            <img style={{display:showImage && currentNavIndex===i?'block':'none'}} loading="lazy" src={`/assets/${item.navImage}`} alt="" />
+            <img style={{opacity:showImage && currentNavIndex===i?'1':'0'}} loading="lazy" src={`/assets/${item.navImage}`} alt="" />
           )
         })
        }
