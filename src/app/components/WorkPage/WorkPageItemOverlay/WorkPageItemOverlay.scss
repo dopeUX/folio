@@ -209,21 +209,30 @@
 	  display: flex;
       width: 100%;
 	  justify-content: center;
+
 	.action-btn-tab{
 	  display: flex;
+	  place-items: center;
 	  margin-right: 2rem;
 	h3{
 		color:rgb(228, 228, 228);
 		font-size: 1rem;
 		margin-right: .5rem;
 	}
-	img{
+	a{
+     width: fit-content;
+	 height: fit-content;		
+	 margin: 0;
+	 display: flex;
+	 text-decoration: none;	
+	 img{
 		width: 30px;
 		transition: transform .3s ease;
 		&:hover{
 			transform: rotate(-45deg);
 		}
-	}
+	 }
+    } 
    }
   }
  }

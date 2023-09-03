@@ -198,6 +198,7 @@
 }
 .work-page-item-overlay .content .action-btns .action-btn-tab {
   display: flex;
+  place-items: center;
   margin-right: 2rem;
 }
 .work-page-item-overlay .content .action-btns .action-btn-tab h3 {
@@ -205,11 +206,20 @@
   font-size: 1rem;
   margin-right: 0.5rem;
 }
-.work-page-item-overlay .content .action-btns .action-btn-tab img {
+.work-page-item-overlay .content .action-btns .action-btn-tab a {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 0;
+  display: flex;
+  text-decoration: none;
+}
+.work-page-item-overlay .content .action-btns .action-btn-tab a img {
   width: 30px;
   transition: transform 0.3s ease;
 }
-.work-page-item-overlay .content .action-btns .action-btn-tab img:hover {
+.work-page-item-overlay .content .action-btns .action-btn-tab a img:hover {
   transform: rotate(-45deg);
 }
 

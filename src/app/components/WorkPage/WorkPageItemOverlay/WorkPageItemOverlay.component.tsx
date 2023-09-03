@@ -114,23 +114,28 @@ const WorkPageItemOverlay:React.FC<any> = () =>{
        <h2 ref={titleRef} className="animate-slideup">{workItem?.projectName}</h2>
 	  </div>
 	  {decideComponent()}
-	   <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+	   <p>{workItem?.projectDesc}</p>
 	   <div className="stack-icons">
-				<img src="/assets/react-logo.svg" alt="" />
-				<img src="/assets/js-logo.svg" alt="" />
-				<img src="/assets/redux-logo.svg" alt="" />
-				<img src="/assets/nodejs-logo.svg" alt="" />
-				<img src="/assets/ts-logo.svg" alt="" />
-				<img src="/assets/tailwind-logo.svg" alt="" />
+		 {
+			workItem?.techStack.map((icon, index)=>{
+				return(
+					<img src={`/assets/${icon}`} alt="" />
+				)
+			})
+		 }
 	   </div>
 	   <div className="action-btns">
 				<div className="action-btn-tab">
 			    	<h3>Visit</h3>
-					<img src="/assets/arrow-right.svg" alt="" />
+					<a href={workItem?.liveUrl} target="_blank">
+					 <img src="/assets/arrow-right.svg" alt="" />
+					</a>
 				</div>
 				<div className="action-btn-tab">
 			    	<h3>Repo</h3>
-					<img src="/assets/arrow-right.svg" alt="" />
+					<a href={workItem?.githubUrl} target="_blank">
+					 <img src="/assets/arrow-right.svg" alt="" />
+				    </a>
 				</div>
 				
 			</div>
