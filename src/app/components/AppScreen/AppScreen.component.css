@@ -94,9 +94,9 @@
     z-index: 23;
     transform: translateY(-50%);
     left: auto;
-    right: 0rem;
+    right: 0;
     font-size: 0.7rem;
-    margin-right: 2rem;
+    margin-right: 1rem;
     margin-top: auto;
     margin-bottom: auto;
   }
