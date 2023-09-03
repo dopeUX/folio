@@ -1,3 +1,7 @@
+.low-screen-res {
+  display: none;
+}
+
 .work-page {
   position: relative;
   margin-bottom: 50px;
@@ -156,4 +160,24 @@
   padding: 5rem;
 }
 
-/* Handle on hover *//*# sourceMappingURL=WorkPage.component.css.map */
+/* Handle on hover */
+@media only screen and (max-width: 800px) {
+  .work-page {
+    display: none;
+  }
+  .low-screen-res {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .low-screen-res img {
+    width: 200px;
+    height: 200px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .low-screen-res h3 {
+    width: 70%;
+    font-size: 0.8rem;
+  }
+}/*# sourceMappingURL=WorkPage.component.css.map */

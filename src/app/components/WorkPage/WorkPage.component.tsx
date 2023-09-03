@@ -58,7 +58,12 @@ const WorkPage:React.FC<any> = () =>{
 	  }
 	},[])
 	return (
-		<div className="work-page">
+		<div>
+		  <div className="low-screen-res">
+		    <img src="/assets/screenresmeme.png" alt="" />
+		    <h3>"This page prefers Desktop! Go get one Syyke"</h3>
+		  </div>	
+		 <div className="work-page">	
           <h1 ref={demoRef} style={{color:colorPallete[colorPalleteIndex].colorHex}}>work.</h1>
 		  {/* {workData.map((item, index:number)=>{
 			return <WorkPageItemCard keyy={index}/>
@@ -104,6 +109,7 @@ const WorkPage:React.FC<any> = () =>{
 				<WorkPageItemCardNew title='TeeRex' image='assets/projectimg2.png'/> */}
 			</div>
 		  </section>
+		</div>
 		</div>
 	)
 }

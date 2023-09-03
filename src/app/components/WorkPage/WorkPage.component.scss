@@ -1,3 +1,7 @@
+.low-screen-res{
+	display: none;
+}
+
 .work-page{
     position: relative;
 	margin-bottom: 50px;
@@ -186,4 +190,25 @@
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
 	// background: #555;
+  }
+
+  @media only screen and (max-width:800px) {
+	.work-page{
+		display: none;
+	}
+	.low-screen-res{
+		display: flex;
+		flex-direction: column;
+        width: 100%;
+		img{
+			width: 200px;
+			height: 200px;
+			object-fit: cover;
+		}
+		h3{
+			width: 70%;
+			font-size: .8rem;
+		}
+	}
+
   }
