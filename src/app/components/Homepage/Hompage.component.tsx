@@ -80,7 +80,7 @@ const Homepage: React.FC<any> = () => {
         <a href="">
           <p>Marketplace.</p>
         </a>
-        <a href="">
+        <a href="https://www.desiriuss.com" target="_blank">
           <p>Read.</p>
         </a> 
         </section>  
